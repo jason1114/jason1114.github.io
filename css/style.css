@@ -1,6 +1,7 @@
 body{
   margin: 0;
-  color: rgb(1, 71, 18)
+  color: rgb(1, 71, 18);
+  font-family: serif;
 }
 a{
   color: rgb(1, 71, 18);
@@ -137,7 +138,7 @@ a.social:hover{
   margin-left: 0;
 }
 #intro{
-  width: 36em;
+  width: 38em;
   font-size: 18px;
   line-height: 26px;
 }
@@ -146,7 +147,8 @@ a.social:hover{
 }
 #intro h1 {
   margin-top: 12px;
-  margin-bottom: 10px;  
+  margin-bottom: 10px; 
+  font-size: 22px; 
 }
 #intro a{
   color: #f30;
@@ -158,4 +160,7 @@ a.social:hover{
 #me180x160 {
   float: left;
   margin-right: 1em;
+}
+.pull-right{
+  margin-right: 5em;
 }
