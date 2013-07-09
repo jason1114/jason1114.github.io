@@ -1,0 +1,135 @@
+body{
+  margin: 0;
+  color: rgb(1, 71, 18)
+}
+a{
+  color: rgb(1, 71, 18);
+  text-decoration: none;
+}
+a:visited{
+  color:rgb(1, 71, 18);
+}
+.header h1{
+  float:left;
+  margin-top: 13px;
+  margin-bottom: 0;
+  font-size: 15pt;
+}
+.header ul{
+  float:right;
+  list-style-type: none;
+  margin-top:0;
+  margin-bottom: 0;
+}
+.header ul li{
+  float:left;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.header ul li a{
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 12pt;
+}
+.header ul li a:hover,
+.header ul li a.active{
+  color:white;
+  background-color: #f30;
+}
+#me{
+  width: 100%
+}
+.logo a{
+  color: rgb(1, 71, 18);
+}
+.primary-link.active {
+}
+header .primary-link {
+  border-color: white;
+}
+header .primary-link {
+  border-color: white;
+}
+.header-top{
+  background-color: white;
+}
+.header{
+  background-color: white;
+}
+.primary-link:hover,
+.primary-link:active {
+}
+.container-full {
+  max-width: none;
+  margin-left: 7em;
+  margin-right: 7em;
+}
+.logo a:hover,.logo a:active {
+  color:#f30;
+}
+#talk{
+  float:left;
+  margin-top: 1em;
+  font-size: 20pt;
+  margin-bottom: 1em;
+}
+#talk-btn{
+  float:right;
+  padding: 1em 1em 1em 1em;
+
+  background-color: #3e3e3e;
+  color: white;
+
+  margin-top: 1em;
+}
+#talk-btn:hover{
+  color:white;
+  background-color: #f30;
+}
+
+.talk-bar{
+  font-weight: 900;
+  height: 5.5em;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  background-color: rgb(243, 243, 243);
+}
+.clear{
+  clear:both;
+}
+hr{
+  clear:both;
+}
+a.social{
+  background-color:#ddd;
+  display: inline-block;
+  height: 48px;
+  width:  48px;
+  margin-right: 1.9em;
+  /*border:1px solid rgb(187, 187, 187);*/
+  border-radius: 3px;
+}
+a.social-last{
+  margin-right: 0;
+}
+a.social:hover{
+  background-color: #f30;
+}
+.social img {
+  width: 30px;
+  position: relative;
+  top: 8px;
+  left: 8px;
+}
+.social-group{
+  margin-bottom: 2em;
+}
+.left{
+  margin-top: 2em;
+  float:left;
+}
