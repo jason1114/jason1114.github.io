@@ -10,20 +10,25 @@ a{
 a:visited{
   color:rgb(1, 71, 18);
 }
+
+.container-nav{
+  margin: 0 auto;
+}
 .header h1{
-  float:left;
   margin-top: 13px;
   margin-bottom: 0;
   font-size: 15pt;
+  text-align: center;
 }
 .header ul{
-  float:right;
   list-style-type: none;
-  margin-top:0;
-  margin-bottom: 0;
+  margin-top:3px;
+  margin-bottom: 3px;
+  padding:0;
+  text-align: center;
 }
 .header ul li{
-  float:left;
+  display: inline;
   margin-left: 0.5em;
   margin-right: 0.5em;
   margin-top: 4px;
@@ -35,7 +40,7 @@ a:visited{
   display: inline-block;
   padding-top: 12px;
   padding-bottom: 12px;
-  font-size: 12pt;
+  font-size: 8pt;
 }
 .header ul li a:hover,
 .header ul li a.active{
@@ -43,7 +48,11 @@ a:visited{
   background-color: #f30;
 }
 #me{
-  width: 100%
+  width: 100%;
+  display:none;
+}
+#me_narrow{
+  width:100%;
 }
 .logo a{
   color: rgb(1, 71, 18);
@@ -65,11 +74,7 @@ header .primary-link {
 .primary-link:hover,
 .primary-link:active {
 }
-.container-full {
-  max-width: none;
-  margin-left: 7em;
-  margin-right: 7em;
-}
+
 .logo a:hover,.logo a:active {
   color:#f30;
 }
@@ -78,14 +83,30 @@ header .primary-link {
   margin-top: 1em;
   font-size: 20pt;
   margin-bottom: 1em;
+  display: none
+}
+#talk-medium{
+  float:left;
+  margin-top: 1em;
+  font-size: 20pt;
+  margin-bottom: 1em;
+  display: none
+}
+#talk-small{
+  display: block;
+  float:left;
+  margin-top: 1em;
+  font-size: 20pt;
+  margin-bottom: 1em;
+  margin-left: 8px;
+  width: 50%;
 }
 #talk-btn{
   float:right;
   padding: 1em 1em 1em 1em;
-
   background-color: #3e3e3e;
   color: white;
-
+  margin-right: 8px;
   margin-top: 1em;
 }
 #talk-btn:hover{
@@ -107,13 +128,24 @@ hr{
   clear:both;
 }
 a.social{
-  background-color:#ddd;
   display: inline-block;
   height: 48px;
   width:  48px;
-  margin-right: 2em;
+  margin-right: 1.5em;
   /*border:1px solid rgb(187, 187, 187);*/
   border-radius: 3px;
+}
+.weibo{
+  background-color: rgb(255, 215, 255);
+}
+.github{
+  background-color: rgb(225, 223, 255);
+}
+.gitcafe{
+  background-color: rgb(162, 226, 187);
+}
+.oschina{
+  background-color: rgb(186, 236, 166);
 }
 a.social-last{
   margin-right: 0;
@@ -128,19 +160,19 @@ a.social:hover{
   left: 8px;
 }
 .social-group{
+  margin-top: 1em;
+  margin-left: 10px;
   margin-bottom: 2em;
 }
-.left{
-  margin-top: 2em;
-  float:left;
-}
+
 .to-left {
   margin-left: 0;
 }
 #intro{
-  width: 38em;
+  /*width: 38em;*/
   font-size: 18px;
   line-height: 26px;
+  margin-left: 10px ;
 }
 #intro p{
   margin-top: 0;
@@ -162,5 +194,69 @@ a.social:hover{
   margin-right: 1em;
 }
 .pull-right{
-  margin-right: 5em;
+  margin-right: 0em;
+}
+.share_self{
+  width: 300px;
+}
+
+@media screen and (min-width: 680px){
+  .header h1{
+    float:left;
+  }
+  .left{
+    margin-top: 2em;
+    float:left;
+  }
+  .header ul{
+    float: right;
+  }
+  .header ul li a{
+    font-size: 12pt;
+  }
+  .container-full {
+    max-width: none;
+    margin-left: 7em;
+    margin-right: 7em;
+  }
+  .pull-right{
+    margin-right: 0;
+  }
+  #talk-medium{
+    display:block;
+  }
+  #talk-small{
+    display: none;
+  }
+  #talk-btn{
+    float:right;
+    padding: 1em 1em 1em 1em;
+
+    background-color: #3e3e3e;
+    color: white;
+    margin-right: 0;
+    margin-top: 1em;
+  }
+  a.social{
+    margin-right: 2em;
+  }
+  #intro{
+    width: 38em;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@media screen and (min-width:980px ){
+  #talk-medium{
+    display: none;
+  }
+  #talk{
+    display:block;
+  }
+  #me{
+    display:inline;
+  }
+  #me_narrow{
+    display: none;
+  }
 }
