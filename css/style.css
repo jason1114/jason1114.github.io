@@ -3,6 +3,16 @@ body{
   color: rgb(1, 71, 18);
   font-family: serif;
 }
+footer{
+  background-color: #3e3e3e;
+  color: rgb(153, 153, 153);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 10pt;
+}
+footer a{
+  color: rgb(153, 153, 153);
+}
 a{
   color: rgb(1, 71, 18);
   text-decoration: none;
@@ -10,7 +20,11 @@ a{
 a:visited{
   color:rgb(1, 71, 18);
 }
-
+.container-full {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
 .container-nav{
   margin: 0 auto;
 }
@@ -94,6 +108,7 @@ header .primary-link {
   margin-top: 1em;
   font-size: 20pt;
   margin-bottom: 1em;
+  margin-left: 16px;
   display: none
 }
 #talk-small{
@@ -177,6 +192,7 @@ a.social:hover{
   font-size: 18px;
   line-height: 26px;
   margin-left: 10px ;
+  margin-right: 10px;
 }
 #intro p{
   margin-top: 0;
@@ -203,6 +219,25 @@ a.social:hover{
 .share_self{
   width: 300px;
   margin-left: 10px;
+  display:none;
+  margin-right: 0;
+}
+#sig img{
+  width: 100%
+}
+#disclaimer{
+  width: 300px;
+  /*float:left;*/
+  margin-left: 10px;
+  font-size: 13pt;
+  margin-right: 10px;
+}
+#copyright{
+  width: 300px;
+  /*float:right;*/
+  margin-left: 10px;
+  font-size: 13pt;
+  margin-right: 10px;
 }
 @media screen and (min-width: 390px){
   #me_mini{
@@ -212,12 +247,18 @@ a.social:hover{
     display: inline;
   }
 }
+/*weibo dispear*/
+@media screen and (min-width: 450px){  
+  #sig{
+    display: none;
+  }
+}
 @media screen and (min-width: 680px){
   .header h1{
     float:left;
+    margin-left: 16px;
   }
   .left{
-    margin-top: 2em;
     float:left;
   }
   .header ul{
@@ -225,11 +266,6 @@ a.social:hover{
   }
   .header ul li a{
     font-size: 12pt;
-  }
-  .container-full {
-    max-width: none;
-    margin-left: 7em;
-    margin-right: 7em;
   }
   .pull-right{
     margin-right: 0;
@@ -243,17 +279,19 @@ a.social:hover{
   #talk-btn{
     float:right;
     padding: 1em 1em 1em 1em;
-
     background-color: #3e3e3e;
     color: white;
-    margin-right: 0;
+    margin-right: 16px;
     margin-top: 1em;
+  }
+  .social-group{
+    margin-left: 16px;
   }
   a.social{
     margin-right: 2em;
   }
   #intro{
-    width: 38em;
+    /*width: 38em;*/
     font-size: 18px;
     line-height: 26px;
   }
@@ -270,5 +308,24 @@ a.social:hover{
   }
   #me_narrow{
     display: none;
+  }
+  .container-full {
+    max-width: none;
+    margin-left: 7em;
+    margin-right: 7em;
+  }
+  .share_self{
+    display: block;
+  }
+  .pull-right{
+    margin-right: 0;
+  }
+  #two_column{
+    position: relative;
+  }
+  #wrap_intro{
+    position: absolute;
+    top:0;
+    left:24em;
   }
 }
