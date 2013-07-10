@@ -53,6 +53,10 @@ a:visited{
 }
 #me_narrow{
   width:100%;
+  display:none;
+}
+#me_mini{
+  width: 100%;
 }
 .logo a{
   color: rgb(1, 71, 18);
@@ -198,8 +202,16 @@ a.social:hover{
 }
 .share_self{
   width: 300px;
+  margin-left: 10px;
 }
-
+@media screen and (min-width: 390px){
+  #me_mini{
+    display: none;
+  }
+  #me_narrow{
+    display: inline;
+  }
+}
 @media screen and (min-width: 680px){
   .header h1{
     float:left;
