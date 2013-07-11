@@ -9,6 +9,7 @@ footer{
   padding-top: 1em;
   padding-bottom: 1em;
   font-size: 10pt;
+  margin-top: 3em;
   position: relative;
 }
 footer a,footer a:visited{
@@ -235,7 +236,6 @@ a.social:hover{
 }
 .share_self{
   width: 300px;
-  margin-left: 16px;
   display:none;
   margin-right: 0;
 }
@@ -318,6 +318,9 @@ a.social:hover{
 @media screen and (min-width:980px ){
   .wrap-social{
     float: left;
+  }
+  .social-group{
+    margin-left: 0;
   }
   #talk-medium{
     display: none;
