@@ -12,9 +12,19 @@ footer{
   position: relative;
 }
 footer a,footer a:visited{
-  color: rgb(153, 153, 153);
+  color: white;
+  text-decoration: underline;
 }
-
+footer input[type="text"] {
+  border: 5px solid white;
+  -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+  padding: 15px;
+  background: rgba(255,255,255,0.5);
+  margin: 0 0 10px 0;
+  width: 18em;
+}
 a{
   color: rgb(1, 71, 18);
   text-decoration: none;
@@ -148,6 +158,9 @@ header .primary-link {
 hr{
   clear:both;
 }
+#social-left{
+  margin-right: 0;
+}
 a.social{
   display: inline-block;
   height: 48px;
@@ -203,6 +216,7 @@ a.social:hover{
   margin-top: 12px;
   margin-bottom: 10px; 
   font-size: 22px; 
+  clear: both;
 }
 #intro a{
   color: #f30;
@@ -214,6 +228,7 @@ a.social:hover{
 #me180x160 {
   float: left;
   margin-right: 1em;
+  margin-bottom: 1em;
 }
 .pull-right{
   margin-right: 0em;
@@ -228,17 +243,16 @@ a.social:hover{
   width: 100%
 }
 #disclaimer{
-  width: 300px;
   /*float:left;*/
   margin-left: 10px;
   font-size: 13pt;
   margin-right: 10px;
+  line-height: 24px;
 }
 #disclaimer b{
   color: white;
 }
 #copyright{
-  width: 300px;
   /*float:right;*/
   margin-left: 10px;
   font-size: 13pt;
@@ -300,18 +314,11 @@ a.social:hover{
     font-size: 18px;
     line-height: 26px;
   }
-  #disclaimer{
-    position: absolute;
-  }
-  #copyright{
-    position: absolute;
-    right:0;
-  }
-  footer{
-    height: 30em;
-  }
 }
 @media screen and (min-width:980px ){
+  .wrap-social{
+    float: left;
+  }
   #talk-medium{
     display: none;
   }
@@ -326,8 +333,8 @@ a.social:hover{
   }
   .container-full {
     max-width: none;
-    margin-left: 7em;
-    margin-right: 7em;
+    margin-left: 4em;
+    margin-right: 4em;
   }
   .share_self{
     display: block;
@@ -339,16 +346,74 @@ a.social:hover{
     position: relative;
   }
   #wrap_intro{
+    float: left;
+    margin-left: 0;
+  }
+  #disclaimer{
+    width: 300px;
     position: absolute;
-    top:0;
-    left:24em;
+  }
+  #copyright{
+    width: 300px;
+    position: absolute;
+    right:0;
+    top:2em;
+  }
+  footer{
+    height: 30em;
+  }
+  footer .container-full{
+    position: relative;
   }
   #disclaimer{
     width: 400px;
-    left:7em;
+    /*left:7em;*/
   }
   #copyright{
-    right:7em;
-    top:2em;
+    width: 400px;
+    /*right:7em;*/
+  }
+}
+@media screen and (min-width:980px ){
+  #wrap_intro{
+    margin-top: 2em;
+    width: 31em;
+  }
+}
+@media screen and (min-width:1030px ){
+  #wrap_intro{
+    margin-left: 1.2em;
+    width: 34em;
+  }
+}
+@media screen and (min-width:1080px ){
+  #wrap_intro{
+    width: 36em;
+  }
+}
+@media screen and (min-width:1130px ){
+  #wrap_intro{
+    width: 37em;
+  }
+}
+@media screen and (min-width:1150px ){
+  #wrap_intro{
+    width: 40em;
+  }
+}
+@media screen and (min-width:1200px ){
+  #wrap_intro{
+    width: 44em;
+  }
+}
+@media screen and (min-width:1250px ){
+  #wrap_intro{
+    width: 47em;
+  }
+}
+@media screen and (min-width:1300px ){
+  #wrap_intro{
+    margin-left: 3em;
+    width: 46em;
   }
 }
