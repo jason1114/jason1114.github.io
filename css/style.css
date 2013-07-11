@@ -400,6 +400,14 @@ a.social:hover{
   #wrap_intro{
     width: 40em;
   }
+  #disclaimer{
+    left: 4em;
+    /*left:7em;*/
+  }
+  #copyright{
+    right: 4em;
+    /*right:7em;*/
+  }
 }
 @media screen and (min-width:1200px ){
   #wrap_intro{
