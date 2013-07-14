@@ -1,0 +1,23 @@
+---
+layout: base
+title: Aticles from Lin
+---
+{% include talk_bar_articles.html %}
+<div id="two_column">
+  <div class="container-full clear wrap-social pull-right" id="social-left">
+   {% include social_group.html%}
+   {% include side_intro.html%}
+ </div>
+  <div class="container-full" id="wrap_intro">
+    <div id="intro">
+      {% for post in site.posts %}
+      <section class="article-item">
+        <h2 class="title1"><a href="#">{{ post.title }}</a></h2>
+        <div class="post-info">Posted on {{ post.date | date_to_string }}</div>
+		    <a href="#"><img class="thumbnail" src="/thumbnails/{{ post.thumbnail }}"></a>
+        <p>{{ post.abstract }} <a href="#">[...]</a></p>
+      </section>
+      {% endfor %}
+    </div>
+  </div>
+</div>

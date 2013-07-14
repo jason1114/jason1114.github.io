@@ -1,107 +1,48 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title }}</title>
-
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="shortcut icon" href="/favicon.ico">
-
-  <link rel="stylesheet" href="/css/style.css">
-  <!--[if lt IE 9]>
-    <script src="/js/shiv.js"></script>
-  <![endif]-->
-  <style type="text/css">
-  
-  </style>
-</head>
-<body>
-  <header class="header">
-    <div class="header-top">
-      <div class="container-full">
-        <h1 class="logo left block"><a href="">CARPENTER IN MILANO</a></h1>
-        
-      </div>
-      <div class="container-nav">
-        <nav class="nav right no-mobile">
-          <ul class="no-style-list">
-            <li><a class="primary-link active"href="">ABOUT ME</a></li>
-            <li><a class="primary-link" href="">ARTCLES</a></li>
-            <li><a class="primary-link" href="">CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
+---
+layout: base
+---
+<img src="/images/me.jpg" id="me">
+<img src="/images/me_narrow.jpg" id="me_narrow">
+<img src="/images/me_mini.jpg" id="me_mini">
+<div class="talk-bar">
+  <div class="container-full clear">
+    <p id="talk">If you are interested in my experiences...</p>
+    <p id="talk-medium">Feel interested? :-P</p>
+    <p id="talk-small">Interested?</p>
+    <a id="talk-btn" href="#" class="button orange-button mobile-full" title="Talk To Me :)">Talk To Me</a>
+  </div>
+</div>
+<div id="two_column">
+  <div class="container-full clear wrap-social pull-right" id="social-left">
+    <div class="social-group">      
+      <a class="social weibo" href=""><img src="/images/weibo.png"></a>
+      <a class="social github" href=""><img src="/images/github.png"></a>
+      <a class="social gitcafe" href=""><img src="/images/gitcafe.png"></a>
+      <a class="social oschina social-last" href=""><img src="/images/oschina.png"></a>
     </div>
-    <img src="/images/me.jpg" id="me">
-    <img src="/images/me_narrow.jpg" id="me_narrow">
-    <img src="/images/me_mini.jpg" id="me_mini">
-    <div class="talk-bar">
-      <div class="container-full clear">
-        <p id="talk">If you are interested in my experiences...</p>
-        <p id="talk-medium">Feel interested? :-P</p>
-        <p id="talk-small">Interested?</p>
-        <a id="talk-btn" href="#" class="button orange-button mobile-full" title="Talk To Me :)">Talk To Me</a>
-      </div>
-    </div>
-  </header>
-  <div id="two_column">
-    <div class="container-full clear wrap-social pull-right" id="social-left">
-      <div class="social-group">      
-        <a class="social weibo" href=""><img src="/images/weibo.png"></a>
-        <a class="social github" href=""><img src="/images/github.png"></a>
-        <a class="social gitcafe" href=""><img src="/images/gitcafe.png"></a>
-        <a class="social oschina social-last" href=""><img src="/images/oschina.png"></a>
-      </div>
-      <a href="http://weibo.com/u/2108183154?s=6uyXnP" target="_blank" id="sig"><img border="0" src="http://service.t.sina.com.cn/widget/qmd/2108183154/c77742aa/1.png"/></a>
-      <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=2108183154&verifier=c77742aa&dpc=1"></iframe>
-    </div>
-    <div class="container-full" id="wrap_intro">
-      <div id="intro">
-        <section>
-          <h1>Meet Me...</h1>
-          <img id="me180x160" src="/images/me180x160.jpg">
-          <p>Hello, my name is Zhou Nie Lin. I was born and raised in the friendly city <a href="http://en.wikipedia.org/wiki/Ningbo">Ningbo</a> (Zhejiang Province.China). I am totally passionate about web development, coding in Java/Javascript, science fiction tv series, online marketing, inline skating, jogging, playing basketball, listening to music and Latin dancing (for example, jive and waltz).</p>
-        </section>
-        <section>
-          <h1>Studying at Shandong University(SDU)</h1>
-          <p>I'm not a carpenter and I live in <a href="http://en.wikipedia.org/wiki/Jinan">Jinan</a>(China).Actually I am a software engineer.I choose the nickname 'carpenter in Milano' just for fun :P . In school my major is Software Engineering.</p>
-        </section>        
-        <section>
-          <h1>Studying at Shandong University at Weihai(SDUW)</h1>
-          <p>I spent the most unforgetable 4 years living and studying at Weihai.I like that city very much.</p>
-        </section>
-        <section>
-          <h1>Life before SDUW</h1>
-          <p>I graduated from Yuyao No.2 high scholl.I felt so lucky that I met my friends at that time who are worth making friends with for life long.</p>
-        </section>
+    <a href="http://weibo.com/u/2108183154?s=6uyXnP" target="_blank" id="sig"><img border="0" src="http://service.t.sina.com.cn/widget/qmd/2108183154/c77742aa/1.png"/></a>
+    <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=2108183154&verifier=c77742aa&dpc=1"></iframe>
+  </div>
+  <div class="container-full" id="wrap_intro">
+    <div id="intro">
+      <section>
+        <h1>Meet Me...</h1>
+        <img id="me180x160" src="/images/me180x160.jpg">
+        <p>Hello, my name is Zhou Nie Lin. I was born and raised in the friendly city <a href="http://en.wikipedia.org/wiki/Ningbo">Ningbo</a> (Zhejiang Province.China). I am totally passionate about web development, coding in Java/Javascript, science fiction tv series, online marketing, inline skating, jogging, playing basketball, listening to music and Latin dancing (for example, jive and waltz).</p>
+      </section>
+      <section>
+        <h1>Studying at Shandong University(SDU)</h1>
+        <p>I'm not a carpenter and I live in <a href="http://en.wikipedia.org/wiki/Jinan">Jinan</a>(China).Actually I am a software engineer.I choose the nickname 'carpenter in Milano' just for fun :P . In school my major is Software Engineering.</p>
+      </section>        
+      <section>
+        <h1>Studying at Shandong University at Weihai(SDUW)</h1>
+        <p>I spent the most unforgetable 4 years living and studying at Weihai.I like that city very much.</p>
+      </section>
+      <section>
+        <h1>Life before SDUW</h1>
+        <p>I graduated from Yuyao No.2 high scholl.I felt so lucky that I met my friends at that time who are worth making friends with for life long.</p>
+      </section>
 
-      </div>
     </div>
   </div>
-  <footer class="clear">
-    <div class="container-full">
-    <div id="disclaimer">
-        <h1>DISCLAIMER</h1>
-        <p>This is my personal website, therefore the views expressed on this website are <b>mine alone</b> and not that of any of my clients or anyone I work with. Please consider anything I discuss or write about to be <b>my personal</b> and <b>biased</b> opinion.
-
-In addition, if I send you an email from my personal email address, leave a comment on your blog, (re)post your stuff, subscribe or respond to you on Weibo, wave at you from the beach, or otherwise communicate with you as an everyday human being, please keep in mind that any views expressed are <b>mine alone</b>.
-        </p>
-    </div>
-    <div id="copyright">
-        <a href="#"> ^ Return to top of page</a>
-        <p>Unless otherwise stated, all contents on this site are released under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 License</a>.</p>
-        <div>
-          <h1>Search</h1>
-          <form>
-            <input type="text">
-          </form>
-        </div>
-        <p>Designed by <b>Zhou</b> | Powered by <a href="http://jekyllrb.com/">Jekyll</a></p>
-        <p>Copyright © 2013 · Zhou</p>
-    </div>
-    </div>
-  </footer>
-</body>
-</html>
+</div>

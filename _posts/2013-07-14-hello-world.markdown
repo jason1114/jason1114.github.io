@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2013-07-06 21:32:10
-categories: jekyll update
+title:  "Hello World!"
+date:   2013-07-14 21:32:10
+categories: 
 thumbnail: welcome-to-jekyll.jpg
 abstract: |
  This is a multi-line string.

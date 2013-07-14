@@ -109,27 +109,21 @@ header .primary-link {
 .logo a:hover,.logo a:active {
   color:#f30;
 }
-#talk{
+.talk{
   float:left;
   margin-top: 1em;
   font-size: 20pt;
   margin-bottom: 1em;
+}
+#talk{  
   display: none
 }
 #talk-medium{
-  float:left;
-  margin-top: 1em;
-  font-size: 20pt;
-  margin-bottom: 1em;
   margin-left: 16px;
   display: none
 }
 #talk-small{
   display: block;
-  float:left;
-  margin-top: 1em;
-  font-size: 20pt;
-  margin-bottom: 1em;
   margin-left: 8px;
   width: 50%;
 }
@@ -140,6 +134,9 @@ header .primary-link {
   color: white;
   margin-right: 8px;
   margin-top: 1em;
+}
+#articles{
+  margin-left: 16px;
 }
 #talk-btn:hover{
   color:white;
@@ -258,6 +255,25 @@ a.social:hover{
   font-size: 13pt;
   margin-right: 10px;
 }
+/*styles for articles*/
+.title1{
+  margin-bottom: 10px;
+}
+.post-info{
+  margin-bottom: 10px;
+  font-size: 12pt;
+  color:rgb(151, 151, 151);;
+}
+.thumbnail{
+  float: left;
+  margin-right: 10px;
+  /*margin-bottom: 10px;*/
+}
+.article-item{
+  clear: both;
+  margin-bottom: 0.5em;
+}
+
 @media screen and (min-width: 390px){
   #me_mini{
     display: none;
@@ -270,6 +286,9 @@ a.social:hover{
 @media screen and (min-width: 450px){  
   #sig{
     display: none;
+  }
+  .article-item{
+    padding-top: 0.5em;
   }
 }
 @media screen and (min-width: 680px){
@@ -427,4 +446,7 @@ a.social:hover{
     margin-left: 3em;
     width: 46em;
   }
+}
+.first-item{
+  padding-top: 0;
 }
