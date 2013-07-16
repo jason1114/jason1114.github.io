@@ -1,9 +1,19 @@
 ---
 layout: base
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+{% include talk_bar.html %}
+<div id="two_column">
+	<div class="container-full clear wrap-social pull-right" id="social-left">
+		{% include social_group.html%}
+		{% include side_intro.html%}
+	</div>
+	<div class="container-full" id="wrap_intro">
+		<div id="intro">
+			<h2>{{ page.title }}</h2>
+			<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
+			<div class="post">
+				{{ content }}
+			</div>
+		</div>
 </div>

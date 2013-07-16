@@ -10,15 +10,40 @@ title: Aticles from Lin
  </div>
   <div class="container-full" id="wrap_intro">
     <div id="intro">
-      {% for post in site.posts %}
+      {% for post in paginator.posts %}
       <section class="article-item">
-        <h2 class="title1"><a href="#">{{ post.title }}</a></h2>
+        <h2 class="title1"><a href="{{ post.url}}">{{ post.title }}</a></h2>
         <div class="post-info">Posted on {{ post.date | date_to_string }}</div>
-		    <a href="#"><img class="thumbnail" src="/thumbnails/{{ post.thumbnail }}"></a>
-        <p>{{ post.abstract }} <a href="#">[...]</a></p>
+		    <a href="{{ post.url}}"><img class="thumbnail" src="/thumbnails/{{ post.thumbnail }}"></a>
+        <p>{{ post.abstract }} <a href="{{ post.url}}">[...]</a></p>
       </section>
       {% endfor %}
     </div>
-    <div class="pagination clear"><span class="disabled">« Previous</span><span class="current">1</span><a href="?page=2">2</a><a href="?page=3">3</a><a href="?page=4">4</a><a href="?page=5">5</a><a href="?page=6">6</a><a href="?page=7">7</a>...<a href="?page=199">199</a><a href="?page=200">200</a><a href="?page=2" class="next">Next »</a></div>
+    <div class="pag-group clear center">
+      <div class="page-num">
+        Page <span>{{ paginator.page }}</span> of <span>{{ paginator.total_pages }}</span>
+      </div>
+      {% assign link = "/articles/page-{{ paginator.previous_page }}/" %}
+      {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+      {% assign link = "/articles/" %}
+      {% endif %}
+      <a href="{{ link }}" class="pag-btn">&lt;&lt;Previews</a>
+      {% else %}
+      <span class="pag-btn">&lt;&lt;Previews</span>
+      {% endif%}
+      {% if paginator.next_page %}
+      <a href="/articles/page-{{ paginator.next_page }}" class="pag-btn">Next&gt;&gt;</a>
+      {% else %}
+      <span class="pag-btn">Next&gt;&gt;</span>
+      {% endif%}
+    </div>
   </div>
+  <!-- {% if paginator %}
+  true
+  {% else %}
+  false
+  {% endif%}
+  total:{{ paginator.total_posts}} -->
+  
 </div>

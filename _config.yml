@@ -1,3 +1,8 @@
 name: Carpenter in Milano
 pygments: true
-permalink: /articles/:title.html
+permalink: /articles/:year/:month/:day/:title.html
+
+paginate: 2
+paginate_path: /articles/page-:num
+
+timezone: Asia/Beijing
