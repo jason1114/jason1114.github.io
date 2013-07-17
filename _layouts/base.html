@@ -21,15 +21,19 @@
   <header class="header">
     <div class="header-top">
       <div class="container-full">
-        <h1 class="logo left block"><a href="">CARPENTER IN MILANO</a></h1>
+        <h1 class="logo left block"><a href="/">CARPENTER IN MILANO</a></h1>
         
       </div>
       <div class="container-nav">
         <nav class="nav right no-mobile">
           <ul class="no-style-list">
-            <li><a class="primary-link active"href="">ABOUT ME</a></li>
-            <li><a class="primary-link" href="">ARTCLES</a></li>
-            <li><a class="primary-link" href="">CONTACT</a></li>
+            {% for link in site.navigation %}
+              {% assign current = nil %}
+              {% if page.active == link.active %}
+              {% assign current = 'active' %}
+              {% endif %}
+              <li><a class="primary-link {{ current }}" href="{{ link.url }}" data-pageurl="{{ page.url }}">{{ link.text }}</a></li>
+            {% endfor %}
           </ul>
         </nav>
       </div>

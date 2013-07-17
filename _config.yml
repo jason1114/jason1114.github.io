@@ -6,3 +6,13 @@ paginate: 2
 paginate_path: /articles/page-:num
 
 timezone: Asia/Beijing
+navigation:
+- text: ABOUT ME
+  active: about
+  url: /
+- text: ARTICLES
+  active: articles
+  url: /articles
+- text: CONTACT
+  active: contact
+  url: /contact
