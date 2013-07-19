@@ -2,7 +2,7 @@ name: Carpenter in Milano
 pygments: true
 permalink: /articles/:year/:month/:day/:title.html
 
-paginate: 2
+paginate: 5
 paginate_path: /articles/page-:num
 
 timezone: Asia/Beijing
