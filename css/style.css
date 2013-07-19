@@ -71,8 +71,8 @@ a:visited{
 }
 .header ul li a:hover,
 .header ul li a.active{
-  color:white;
-  background-color: #f30;
+  color: #f30;
+  /*background-color: #f30;*/
 }
 #me{
   width: 100%;
