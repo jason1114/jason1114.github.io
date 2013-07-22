@@ -1,7 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 body{
   margin: 0;
   color: rgb(1, 71, 18);
-  font-family: serif;
+  /*font-family: serif;*/
+  font-family: 'Open Sans', sans-serif, tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;;
 }
 footer{
   background-color: #3e3e3e;
@@ -482,7 +484,6 @@ a.social:hover{
   border:1px solid #eeb44f;
   display:inline-block;
   color:#ffffff;
-  font-family:arial;
   font-size:15px;
   font-weight:bold;
   padding:6px 24px;
