@@ -16,6 +16,10 @@ active: articles
 			<div class="post {% if page.lan == 'cn' %}cn {% else %}en{% endif %}">
 				{{ content }}
 			</div>
+			{% if page.lan == 'cn' %}
+			<p>（完）</p>
+			{% else %}
+			{% endif %}
 		</div>
 		 <div id="disqus_thread"></div>
     <script type="text/javascript">

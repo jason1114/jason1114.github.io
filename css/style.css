@@ -235,6 +235,7 @@ a.social:hover{
   margin-bottom: 10px; 
   font-size: 28px; 
   clear: both;
+  line-height: 38px;
 }
 #intro img{
   max-width: 100%;
@@ -282,6 +283,46 @@ a.social:hover{
 .title1{
   margin-bottom: 10px;
 }
+.cn{
+  font-size:11pt;
+}
+.post img{
+  margin-top:1em;
+  margin-bottom:1em;
+}
+.post table{
+  width: 100%;
+  margin-bottom: 1em;
+}
+.post table th{
+  font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica,
+  sans-serif;
+  color: #6D929B;
+  border-right: 1px solid #C1DAD7;
+  border-bottom: 1px solid #C1DAD7;
+  border-top: 1px solid #C1DAD7;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 6px 6px 6px 12px;
+  background: #CAE8EA;
+  text-align: left;
+}
+.post table th:first-child{
+  text-align: left;
+}
+.post table tr td{
+  border-right: 1px solid #C1DAD7;
+  border-bottom: 1px solid #C1DAD7;
+  background: #fff;
+  padding: 6px 6px 6px 12px;
+  color: #6D929B;
+  text-align: left;
+  font-size: 10pt;
+}
+.post table tr td:first-child{
+  text-align: left;
+}
 .post-info{
   margin-bottom: 10px;
   font-size: 12pt;
@@ -309,6 +350,7 @@ a.social:hover{
 #disqus_thread{
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 3em;
 }
 @media screen and (min-width: 390px){
   #me_mini{
