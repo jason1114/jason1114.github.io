@@ -6,8 +6,10 @@ active: articles
 <div id="two_column">
 	<div class="container-full clear wrap-social pull-right" id="social-left">
 		{% include social_group.html%}
-		{% include side_intro.html%}
-		{% include rss_button.html %}
+		<div class="share_self">
+   			{% include side_intro.html %}
+  		</div>
+
 	</div>
 	<div class="container-full" id="wrap_intro">
 		<div id="intro">
@@ -40,6 +42,9 @@ active: articles
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>   
+</div>
+<div class="bottom_intro">
+    <hr/>
+   {% include side_intro.html %}
 </div>
