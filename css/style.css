@@ -6,6 +6,12 @@ body{
   font-family: 'Open Sans', sans-serif, tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;;
   background-color: rgb(245, 249, 255);
 }
+hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 ::-moz-selection {
   background-color: #dd2020;
   color: #fff;
@@ -286,6 +292,10 @@ a.social:hover{
   font-size: 13pt;
   margin-right: 10px;
 }
+.bottom_intro{
+  width: 300px;
+  margin: 0 auto;
+}
 /*
 ***********************************
 styles for articles
@@ -415,6 +425,9 @@ styles for articles
   }
   .article-item{
     padding-top: 0.5em;
+  }
+  .bottom_intro{
+    display: none;
   }
 }
 @media screen and (min-width: 680px){

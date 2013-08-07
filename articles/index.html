@@ -6,9 +6,12 @@ active: articles
 {% include talk_bar_articles.html %}
 <div id="two_column">
   <div class="container-full clear wrap-social pull-right" id="social-left">
+  
    {% include social_group.html %}
+  <div class="share_self">
    {% include side_intro.html %}
-   {% include rss_button.html %}
+  </div>
+   
  </div>
   <div class="container-full" id="wrap_intro">
     <div id="intro">
@@ -41,4 +44,9 @@ active: articles
       {% endif%}
     </div>
   </div>  
+</div>
+
+<div class="bottom_intro">
+    <hr/>
+   {% include side_intro.html %}
 </div>
