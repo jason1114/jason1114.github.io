@@ -4,6 +4,7 @@ body{
   color: rgb(1, 71, 18);
   /*font-family: serif;*/
   font-family: 'Open Sans', sans-serif, tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;;
+  background-color: rgb(245, 249, 255);
 }
 ::-moz-selection {
   background-color: #dd2020;
@@ -280,6 +281,13 @@ a.social:hover{
   margin-right: 10px;
 }
 /*styles for articles*/
+.next-and-previous{
+  margin-top: 2em;  
+  font-size:10pt
+}
+.next-and-previous span{
+  margin-right:1em;
+}
 .title1{
   margin-bottom: 10px;
 }

@@ -12,7 +12,7 @@ abstract: |
    当你开一家公司的时候也许从来不会觉得哪一天会有足够的时间，那就请利用早晨的力量吧，那是一天之中任务最少的时间，当你充分的利用了这早晨的力量，也许它就会成为提高你的生产力的关键。
 
    15年以来，星巴克总裁 Michelle Gaas 为了晨跑把她的闹钟设定为 4:30。Gretchen Ruben，畅销书《过得还不错的一年：我的快乐生活提案》（2011年，Harper Perennial 出版社）的作者每天早晨6点醒来，工作一个小时，直到其它家庭成员也陆续起床。时间规划领域的专家 Laura Vanderkam 在她的书《最成功的人士在早餐之前做什么》（2013年，Portfolio Trade 出版社）中特别阐述了为什么早晨的时间这么特殊以及人们应该如何更加有效得去利用它。下面讲述一些早起的优势。
-![we-are-morning-people](/uploads/we-are-morning-people.jpg "we-are-morning-people")
+![we-are-morning-people](http://carpenter.qiniudn.com/we-are-morning-people.jpg "we-are-morning-people")
 ##早晨的时间更容易使你思想集中
    一个企业家一天的时间很快就会被填满，如果你一直要等到下午或者晚上再去做一些有意义的事情比如锻炼身体或者阅读，那你很有可能把它们完全给推迟。“下午4点的时候你将会有很多的理由为什么你不能立刻处理一件本该优先处理的事情。但是如果现在是在早晨6点，那么出现这种情况的可能性将会很小。”Vanderkam 提到。
 ##早晨的时间人的意志力更强

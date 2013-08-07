@@ -13,55 +13,55 @@ abstract: |
 7月1号这一天，我们早上起来，先去了一趟报国寺，结果被告知报国寺需要单独买票，不在峨眉山的门票价格里，于是我们没有进去玩直接折返到报国寺客运站乘坐巴士到雷洞坪。不过我们上车后发现车上好多上海口音的人，但就是没有碰到昨天让我们搭顺风车的上海人。
 
 老冬的三个通信同学中的两个女生，在峨眉山下“论剑”。
-![](/uploads/emei-foot-5.jpg "emei foot")
+![](http://carpenter.qiniudn.com/emei-foot-5.jpg "emei foot")
 
 上山之前在山脚下摆一个出发的POSE。
-![](/uploads/emei-foot-6.jpg "emei foot")
+![](http://carpenter.qiniudn.com/emei-foot-6.jpg "emei foot")
 
 这是去往雷洞坪的大巴在半山腰上休息，我下车透气时，发现的一所学校（就在休息点的路边），看到我大浙江的教育输出我心里也是很自豪，但愿这所学校名副其实，但愿这所学校真的帮助了那些需要帮助的孩子，但愿这所学校能继续新陈代谢存活下去……
-![](/uploads/emei-school.jpg "school")
+![](http://carpenter.qiniudn.com/emei-school.jpg "school")
 
 坐到雷洞坪下车后，往上爬一段，就是“慈云西极”，应该是一个寺庙名，峨嵋是四大佛教名山，山上庙宇众多。
-![](/uploads/emei-ciyunxiji.jpg "ciyunxiji")
+![](http://carpenter.qiniudn.com/emei-ciyunxiji.jpg "ciyunxiji")
 
 在“慈云西极”观景台上我们一行人的合影。
-![](/uploads/emei-group-shot-1.jpg "group shot")
+![](http://carpenter.qiniudn.com/emei-group-shot-1.jpg "group shot")
 
 在登山过程中遇到的老奶奶，全程徒步，我们每爬一段就累得不行要休息，可是每当我们一停下来，老奶奶就会一步一步赶上来，超过我们，也没有看见老奶奶停下来休息过，看年纪，应该也有80了吧，有这样的精神，有这样的体力，令人钦佩。
-![](/uploads/emei-grandma.jpg "grandma")
+![](http://carpenter.qiniudn.com/emei-grandma.jpg "grandma")
 
 我们正在爬山。
-![](/uploads/emei-we-are-climbing-the-mounting.jpg "we are climbing")
+![](http://carpenter.qiniudn.com/emei-we-are-climbing-the-mounting.jpg "we are climbing")
 
 太子坪。刚才的老奶奶爬到这里终于进了太子坪上的这个寺庙里，可能是这个寺庙的居士或者香客吧。
-![](/uploads/emei-taizi-temple.jpg "taizi temple")
+![](http://carpenter.qiniudn.com/emei-taizi-temple.jpg "taizi temple")
 
 终于爬上了著名的金顶，十方普贤菩萨，罪过，我妈叫我别拍菩萨，我没拍，这是别人拍的……>_<菩萨原谅我……
-![](/uploads/emei-samantabhadra-bodhisattva.jpg "samantabhadra bodhisattva")
+![](http://carpenter.qiniudn.com/emei-samantabhadra-bodhisattva.jpg "samantabhadra bodhisattva")
 
 金顶云海，“会当凌绝顶，一览……”，好像连众山都没有了……
-![](/uploads/emei-sea-of-clouds.jpg "sea of clouds")
+![](http://carpenter.qiniudn.com/emei-sea-of-clouds.jpg "sea of clouds")
 
 金顶上的合影。
-![](/uploads/emei-group-shot-2.jpg "group shot")
+![](http://carpenter.qiniudn.com/emei-group-shot-2.jpg "group shot")
 
 还是金顶上的合影，背景是云海，摄影师是一个抱孩子的叔叔。
-![](/uploads/emei-group-shot-3.jpg "group shot")
+![](http://carpenter.qiniudn.com/emei-group-shot-3.jpg "group shot")
 
 从金顶游完之后，因为体力不支，就乘坐索道下到雷洞坪，再坐巴士到五显岗，然后步行至到清音阁。去清音阁路上的铁锁桥走着很过瘾。^_^
-![](/uploads/emei-swinging-bridge.jpg "swinging bridge")
+![](http://carpenter.qiniudn.com/emei-swinging-bridge.jpg "swinging bridge")
 
 一线天里真的很凉快啊，不想出去了都！
-![](/uploads/emei-yixiantian.jpg "yixiantian")
+![](http://carpenter.qiniudn.com/emei-yixiantian.jpg "yixiantian")
 
 沿着小溪都很凉快，也很有乐趣！
-![](/uploads/emei-qingyinge-1.jpg "qingyinge")
+![](http://carpenter.qiniudn.com/emei-qingyinge-1.jpg "qingyinge")
 
 他们在干什么？好像我记得是在打水漂= =！
-![](/uploads/emei-group-shot-4.jpg "group shot")
+![](http://carpenter.qiniudn.com/emei-group-shot-4.jpg "group shot")
 
 石壁上的雕刻。
-![](/uploads/emei-qingyinge-2.jpg "qingyinge")
+![](http://carpenter.qiniudn.com/emei-qingyinge-2.jpg "qingyinge")
 
 我们走清音阁一线的最终目的地乃生态猴区，同行的女生很害怕，据说那里的猴子好生厉害，我经过的时候，有一只猴子爬到我背上，吓我一跳，结果把我放在登山包右边的一瓶矿泉水拿走，然后在底上咬破一个洞，咕咚咕咚喝完了，还蛮可爱的。桥上有一只猴子眼巴巴地看着我，我于是伸过手去给它握手，结果被他暗算了，握完手，它顺势爬到我头上，然后……买了包猴粮，终于让它下来了>_<此行可算是与猴子的两次亲密接触了……
 

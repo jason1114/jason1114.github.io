@@ -20,7 +20,12 @@ active: articles
 			<p>（完）</p>
 			{% else %}
 			{% endif %}
+			<div class="next-and-previous">
+				<p><span >&lt;&lt;</span><a href="{{ page.previous.url }}">{{ page.previous.title}}</a></p>
+				<p><span >&gt;&gt;</span><a href="{{ page.next.url }}">{{ page.next.title}}</a></p>
+			</div>
 		</div>
+		
 		 <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

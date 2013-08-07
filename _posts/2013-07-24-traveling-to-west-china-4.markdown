@@ -17,33 +17,33 @@ abstract: |
 原来打算按照攻略从剑阁北门玩到南门，不过司机没有报站，直接把我们送到了南门。好吧就这样开始吧，其实剑阁整个景区就是围绕李白《蜀道难》和三国主题建立的，蜀汉的重要人物，李白的诗词在景区随处可见。
 
 “先帝之志，丞相之托，不可忘也！”蜀汉的忠臣——姜维。
-![](/uploads/guangyuan-jiange-jiangwei.jpg "jiangwei")
+![](http://carpenter.qiniudn.com/guangyuan-jiange-jiangwei.jpg "jiangwei")
 
 来剑阁最重要的景点-剑阁关楼，是不是很有气势，所谓“一夫当关，万夫莫开”是也！不过可惜眼前的关楼并不是蜀汗时期那个关楼了，也不是李白那个时候的关楼，由于历史原因，关楼屡毁屡建，目前的关楼是现代人根据明代关楼的记载复制的。
-![](/uploads/guangyuan-jiange-guanlou.jpg "guanlou")
+![](http://carpenter.qiniudn.com/guangyuan-jiange-guanlou.jpg "guanlou")
 
 “天下雄关”、"剑阁天下险”——剑门关
-![](/uploads/guangyuan-jiange-symbol.jpg "symbol")
+![](http://carpenter.qiniudn.com/guangyuan-jiange-symbol.jpg "symbol")
 
 在雷鸣桥边，我和一个大婶讲了半天价，终于把这把心爱的诸葛连弩以32块钱收入，自带10连杀哦！突突~突突~突突~
-![](/uploads/guangyuan-jiange-liannu.jpg "liannu")
+![](http://carpenter.qiniudn.com/guangyuan-jiange-liannu.jpg "liannu")
 
 老冬在戏水，o(∩∩)o...哈哈
-![](/uploads/guangyuan-jiange-dong-1.jpg "dong")
+![](http://carpenter.qiniudn.com/guangyuan-jiange-dong-1.jpg "dong")
 
 在剑阁的滑道很有意思，其实就是滑梯，为了防止屁股烫，他们会给你屁股套上一层包着塑料的布料。跟老板讲了讲价，原来是20块一个人，最后20块两个人成交，滑下去很爽诶！看，老冬又在卖萌了，o(∩∩)o...哈哈
-![](/uploads/guangyuan-jiange-dong-2.jpg "dong")
+![](http://carpenter.qiniudn.com/guangyuan-jiange-dong-2.jpg "dong")
 
 在剑阁其实就是无止境的栈道，上上下下，极大得考验了我们的体能，老冬正在天梯峡爬天梯，挑战天梯2000+。 o(∩∩)o...
-![](/uploads/guangyuan-jiange-tianti.jpg "tianti")
+![](http://carpenter.qiniudn.com/guangyuan-jiange-tianti.jpg "tianti")
 
 从南门走到北门，我们的行程中止在蜀道难题壁，走到这里才能真正明白“蜀道难！难于上青天！”
-![](/uploads/guangyuan-jiange-shudaonan.jpg "shudaonan")
+![](http://carpenter.qiniudn.com/guangyuan-jiange-shudaonan.jpg "shudaonan")
 
 从北门出来，发现北门回广元的车子好少啊，要坐也要坐南门回广元的过路车，旁边开剑阁豆腐店的老板还吓我们说一小时一辆车>_<,最后为了能早点回去，我们和另外4个人拼了一辆小面包车回广元，一人30。一路上那司机哥们开得那个HIGH啊，本以为开这么快应该能早点到吧，结果居然和公交车时间差不多，一路上还害我心惊肉跳，大哥，那都是盘山路啊，车速未免略快吧！
 
 回了火车站，在车站旁边解决了晚饭，老冬点了一碗酷似百纳福套餐的食物，我点了一碗黑椒牛柳盖饭，别看它其貌不扬，其实可好吃了^O^
-![](/uploads/guangyuan-gaifan.jpg "gaifan")
+![](http://carpenter.qiniudn.com/guangyuan-gaifan.jpg "gaifan")
 
 吃完饭，结束了剑阁的行程，今天要早点休息，因为明天还要赶个大早去往九寨沟。
 

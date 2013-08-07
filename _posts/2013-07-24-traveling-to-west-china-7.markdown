@@ -17,28 +17,27 @@ abstract: |
 整个行程和广元线相比，路明显宽阔很多，道路两边更开阔，山路少，车辆多，路线安全，但是风景就没法和广元线相比了。
 
 历经10个小时，到达新南门汽车站，查看了新南门的去乐山的发车时间表，随后我们坐地铁去成都火车站（我们的住所总是围绕火车站= =！因为觉得坐火车方便）。
-![](/uploads/chengdu-xinnanmen.jpg "xinnanmen")
+![](http://carpenter.qiniudn.com/chengdu-xinnanmen.jpg "xinnanmen")
 
 成都的地铁总体感觉和上海、西安的地铁感觉差不多，目前只有两条线路，1号线和2号线。
-![](/uploads/chengdu-railway.jpg "railway")
+![](http://carpenter.qiniudn.com/chengdu-railway.jpg "railway")
 
 在火车站旁边的如家放下行李后，团购了成都一家自助，准备大吃一顿= =！位于春熙路的银石广场哦，吃完饭顺便逛春熙路了。
-![](/uploads/chengdu-dinner.jpg "dinner")
 
 春熙路步行街人来人往。
-![](/uploads/chengdu-chunxi-1.jpg "chunxi")
+![](http://carpenter.qiniudn.com/chengdu-chunxi-1.jpg "chunxi")
 
 夜景璀璨，成都是四川大城市梦的寄托。
-![](/uploads/chengdu-chunxi-2.jpg "chunxi")
+![](http://carpenter.qiniudn.com/chengdu-chunxi-2.jpg "chunxi")
 
 脚下的这条春熙路是可以和上海的南京路相媲美的。
-![](/uploads/chengdu-chunxi-3.jpg "chunxi")
+![](http://carpenter.qiniudn.com/chengdu-chunxi-3.jpg "chunxi")
 
 第一次看到这家店，有点让我大跌眼睛，我想起了威海食堂的吉阿婆，那个肯德基老爷爷失散多年的老伴，还真是有异曲同工之妙啊。不过这个LOGO和名字真是很有喜感，在四川，在西南地区这个快餐连锁随处可见，有赶超KFC的趋势，老冬去里面上了一趟厕所，回来也是对里面的环境大加赞赏。
-![](/uploads/chengdu-chunxi-4.jpg "chunxi")
+![](http://carpenter.qiniudn.com/chengdu-chunxi-4.jpg "chunxi")
 
 春熙路上得锦华馆，时间关系，没有进去看，就拍了个门脸，觉得应该和西安回民街的“高家大院”差不多，记录了一些历史变迁之类的。
-![](/uploads/chengdu-chunxi-5.jpg "chunxi")
+![](http://carpenter.qiniudn.com/chengdu-chunxi-5.jpg "chunxi")
 
 转完春熙路大概晚上10点左右，坐公交回到酒店，休息，准备第二天的乐山之行。
 
