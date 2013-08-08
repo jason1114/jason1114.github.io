@@ -3,7 +3,6 @@ layout: post
 title:  "从西安到成都-我们的旅行(五)"
 date:   2013-07-26 9:46:17
 categories: traveling
-thumbnail: the-power-of-mornings.jpg
 lan: cn
 abstract: |
  早上5点，起床，去往九寨沟的车子是6点的，收拾好就出发去长途汽车站，在门口买了个饼吃，然后找到发往九寨沟的车子，离发车时间还有一段时间，有好几个老外在车外聊天。据网上讲，这趟车子一般晚点，果然，6点的车子到6点半才发，上了车，车子开始出发。

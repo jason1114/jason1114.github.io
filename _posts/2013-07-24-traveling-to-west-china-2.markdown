@@ -3,7 +3,6 @@ layout: post
 title:  "从西安到成都-我们的旅行(二)"
 date:   2013-07-23 9:46:17
 categories: traveling
-thumbnail: the-power-of-mornings.jpg
 lan: cn
 abstract: |
  经过一夜火车的颠簸，24日中午终于到达我们第一个终点-古都西安。“滚滚红尘帝王都，悠悠岁月百姓城”，遥想历史上的强汉、盛唐，心里是万分激动的。陕西当地人有句民谣：“江南的才子山东的将,陕西的黄土埋皇上。”

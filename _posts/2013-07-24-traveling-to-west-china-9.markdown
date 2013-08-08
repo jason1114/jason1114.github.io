@@ -3,7 +3,6 @@ layout: post
 title:  "从西安到成都-我们的旅行(九)"
 date:   2013-07-30 9:46:17
 categories: traveling
-thumbnail: the-power-of-mornings.jpg
 lan: cn
 abstract: |
  7月1号这一天，我们早上起来，先去了一趟报国寺，结果被告知报国寺需要单独买票，不在峨眉山的门票价格里，于是我们没有进去玩直接折返到报国寺客运站乘坐巴士到雷洞坪。不过我们上车后发现车上好多上海口音的人，但就是没有碰到昨天让我们搭顺风车的上海人。
