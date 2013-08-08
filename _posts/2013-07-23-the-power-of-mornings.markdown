@@ -2,7 +2,7 @@
 layout: post
 title:  "[译]早晨的力量：为什么成功的企业家习惯于早起"
 date:   2013-07-23 9:46:17
-categories: others
+categories: translation
 thumbnail: the-power-of-mornings.jpg
 lan: cn
 abstract: |

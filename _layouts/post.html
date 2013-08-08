@@ -14,7 +14,11 @@ active: articles
 	<div class="container-full" id="wrap_intro">
 		<div id="intro">
 			<h2>{{ page.title }}</h2>
-			<p class="meta">{{ page.date | date_to_string }}</p>
+			<p class="meta">{{ page.date | date_to_string }}>>Categories:{% for c in page.categories %}
+			<span><a href="/articles/{{ c }}">{{ c }}</a></span> 
+			
+			{% endfor %}
+			</p>
 
 			<div class="post {% if page.lan == 'cn' %}cn {% else %}en{% endif %}">
 				{{ content }}

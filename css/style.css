@@ -6,6 +6,19 @@ body{
   font-family: 'Open Sans', sans-serif, tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;;
   background-color: rgb(245, 249, 255);
 }
+.tag_cloud{
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 3em;
+}
+.tag_cloud a:hover{
+  color:#0081BE;
+  text-shadow: 0px 2px 3px #555;
+}
+.tag_cloud li{
+  float: left;
+}
 hr{
     border: 0;
     height: 0;
