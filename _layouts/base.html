@@ -47,7 +47,7 @@ In addition, if I send you an email from my personal email address, leave a comm
         </p>
     </div>
     <div id="copyright">
-        <a href="#"> ^ Return to top of page</a>
+        <a href="#" id="to-top"> ^ Return to top of page</a>
         <p>Unless otherwise stated, all contents on this site are released under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 License</a>.</p>
         <div>
           <h2>Search</h2>
@@ -60,6 +60,40 @@ In addition, if I send you an email from my personal email address, leave a comm
     </div>
     </div>
   </footer>
+  <div id="wrap-back-top">
+    <p id="back-top" style="display:none;">
+      <a><span></span>Back to Top</a>    
+    </p>
+  </div>
+  <script type="text/javascript" src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    // hide #back-top first
+    $("#back-top").hide();
+    
+    // fade in #back-top
+    $(function () {
+      $(window).scroll(function () {
+        var scrollBottom = $(document).height()-$(this).scrollTop()
+        if ($(this).scrollTop() > 640 && scrollBottom > 1200) {
+          $('#back-top').fadeIn();
+        } else {
+          $('#back-top').fadeOut();
+        }
+      });
+      // scroll body to 0px on click
+      $('#back-top a').click(scrollToTop);
+      function scrollToTop() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      }
+      $("#to-top").click(scrollToTop)
+    });
+
+  });
+  </script>
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
