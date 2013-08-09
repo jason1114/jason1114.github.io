@@ -1,0 +1,71 @@
+---
+layout: base
+active: articles
+---
+{% include talk_bar_articles.html %}
+{% capture category %}{{ page.url | remove: 'index.html' | split: '/' | last }}{% endcapture %}
+{% assign page.title = "123" %}
+<div id="two_column">
+  <div class="container-full clear wrap-social pull-right" id="social-left">
+  
+   {% include social_group.html %}
+  <div class="share_self">
+   {% include side_intro.html %}
+  </div>
+   
+ </div>
+  <div class="container-full" id="wrap_intro">
+    <div id="intro">
+      <h1>Category: {{category}} ({{site.categories[category].size}})</h1>
+      {% assign post = site.categories[category].first %}
+      <section class="article-item">
+        <h2 class="title1"><a href="{{ post.url}}">{{ post.title }}</a></h2>
+        <div class="post-info">Posted on {{ post.date | date_to_string }}>>Categories:{% for c in post.categories %}
+      <span><a href="/articles/{{ c }}">{{ c }}</a></span> 
+      
+      {% endfor %}</div>
+        <a href="{{ post.url}}"><img class="thumbnail" src="http://carpenter-thumbs.qiniudn.com/{{ post.url | split: '/' | last |remove: '.html'}}.jpg"></a>
+        <p>{{ post.abstract }} <a href="{{ post.url}}">[...]</a></p>
+      </section>
+      
+      {% for post in site.categories[category] offset: 1 %}
+      <hr>
+      <section class="article-item previous">
+        <span>{{ post.title }}</span>
+        <div class="post-info">{{ post.date | date_to_string }}[{% for c in post.categories %}
+      <span><a href="/articles/{{ c }}">{{ c }}</a></span> 
+      
+      {% endfor %}]
+      <span class="more">&lt;<a href="{{ post.url }}">More...</a>&gt;</span>
+      </div>
+		    <!-- <a href="{{ post.url}}"><img class="thumbnail" src="http://carpenter-thumbs.qiniudn.com/{{ post.url | split: '/' | last |remove: '.html'}}.jpg"></a>
+        <p>{{ post.abstract }} <a href="{{ post.url}}">[...]</a></p> -->
+      </section>
+      {% endfor %}
+    </div>
+    <!-- <div class="pag-group clear center">
+      <div class="page-num">
+        Page <span>{{ paginator.page }}</span> of <span>{{ paginator.total_pages }}</span>
+      </div>
+      {% assign link = "/articles/page-{{ paginator.previous_page }}/" %}
+      {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+      {% assign link = "/articles/" %}
+      {% endif %}
+      <a href="{{ link }}" class="pag-btn">&lt;&lt;Previews</a>
+      {% else %}
+      <span class="pag-btn">&lt;&lt;Previews</span>
+      {% endif%}
+      {% if paginator.next_page %}
+      <a href="/articles/page-{{ paginator.next_page }}" class="pag-btn">Next&gt;&gt;</a>
+      {% else %}
+      <span class="pag-btn">Next&gt;&gt;</span>
+      {% endif%}
+    </div> -->
+  </div>  
+</div>
+
+<div class="bottom_intro">
+    <hr/>
+   {% include side_intro.html %}
+</div>
