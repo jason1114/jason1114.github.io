@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "从西安到成都-我们的旅行(八)"
-date:   2013-07-29 9:46:17
+date:   2013-07-31 9:46:17
 categories: traveling
 lan: cn
 abstract: |
