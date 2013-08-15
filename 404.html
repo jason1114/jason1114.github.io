@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Happy+Monkey' rel='stylesheet' type='text/css'>
+<style type="text/css">
+	body{
+		background-image: url(/images/bg.png);
+	}
+	.container{
+		margin: 0 auto;
+		
+		text-align: center;
+	}
+	img{
+		border: 0;
+	}
+	h1 {  
+        /*position: relative;  */
+        font-size: 100px;  
+        margin-top: 20px;  
+        font-family: 'Happy Monkey', 'Myriad', helvetica, arial, sans-serif;  
+        text-shadow: 2px 3px 3px #292929;  
+        letter-spacing: -7px;  
+        -webkit-text-stroke: 1px white;  
+        margin-bottom: 20px;
+      
+    }  
+      
+      
+  
+    h1 a {  
+        text-decoration: none;  
+        color: #ffffff;  
+        /*position: absolute;  */
+  
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottombottom, from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,0)), to(rgba(0,0,0,1)));  
+        text-shadow: 0 2px 0 #e9e9e9;  
+        -webkit-transition: all .3s;  
+        -moz-transition: all .3s;  
+        transition: all .3s;  
+    }  
+      
+    h1 a:hover {  
+        color: #185a50;  
+    }  
+  
+    h1:after {  
+        color: #dbdbdb;  
+        content : attr(data-title);  
+    }  
+	.polaroid {
+	  position: relative;
+	  /*width: 220px;*/
+	  margin: 0 auto;
+	}
+	 
+	.polaroid img {
+	  border: 10px solid #fff;
+	  border-bottom: 45px solid #fff;
+	  -webkit-box-shadow: 3px 3px 3px #777;
+	     -moz-box-shadow: 3px 3px 3px #777;
+	          box-shadow: 3px 3px 3px #777;
+	}
+	 
+	.polaroid p {
+	  position: absolute;
+	  text-align: center;
+	  width: 100%;
+	  bottom: 0px;
+	  font: 400 16px/1 'Happy Monkey', cursive;
+	  color: #888;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		
+		<h1><a>404</a></h1>
+	</div>
+	<div class="container">
+		<div class="polaroid">
+			<p>CARPENTER IN MILANO</p>
+			<a href="/"><img src="/images/me300x200.jpg"></a>
+		</div>
+	</div>
+</body>
+</html>
