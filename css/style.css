@@ -6,6 +6,19 @@ body{
   font-family: 'Open Sans', sans-serif, tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;;
   background-color: rgb(245, 249, 255);
 }
+.highlight{
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   background-color: #EEE;
+   padding-top: 1px;
+   padding-left: 20px;
+   padding-bottom: 1px;
+   color: black;
+   border:2px solid white;
+}
+.highlight:before{
+}
 .tag_cloud{
   list-style-type: none;
   padding-left: 0;
@@ -21,6 +34,7 @@ body{
 }
 .tag_cloud li{
   float: left;
+  margin: 3px;
 }
 hr{
     border: 0;
@@ -360,9 +374,33 @@ styles for articles
 .cn{
   font-size:11pt;
 }
+.post .highlight pre{
+  white-space:pre-wrap; /* css-3 */
+  white-space:-moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space:-pre-wrap; /* Opera 4-6 */
+  white-space:-o-pre-wrap; /* Opera 7 */
+  word-wrap:break-word; /* Internet Explorer 5.5+ */
+  -moz-binding: url('./wordwrap.xml#wordwrap'); /* firefox */
+}
+.post ol li{
+  margin-bottom: 2px;
+}
+.post em{
+  color: #8D00B1;
+  font-weight: 900;
+  background-color: #EBE9E9;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
 .post img{
   margin-top:1em;
   margin-bottom:1em;
+  display: block;
 }
 .post table{
   width: 100%;
@@ -421,7 +459,7 @@ styles for articles
 .page-num{
   margin-bottom: 1em;
 }
-#disqus_thread{
+#ds-thread{
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 3em;
