@@ -112,6 +112,7 @@ IPv4选项卡的配置。
 ##参考文档
 1.rschapman, [Amazon VPN Instructions](https://github.com/jason1114/amazon-vpn-instructions/blob/master/Amazon%20VPN.md)
 2.yowachen, [Amazon Ubuntu PPTP VPN](http://yowachen.blogspot.com/2011/07/amazon-ec2-ubuntuvpn-pptp.html)
+3.[Amazon Web Service](http://aws.amazon.com/)
 
 
 [sign up for aws]: http://www.freehao123.com/amazon-aws/ "sign up for aws"
