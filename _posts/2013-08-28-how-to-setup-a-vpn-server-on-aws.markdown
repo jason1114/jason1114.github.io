@@ -40,7 +40,7 @@ sudo vi /etc/ppp/pptpd-options
 ms-dns 8.8.8.8
 ms-dns 8.8.4.4
 {% endhighlight %}
-先不要退出这个配置文件，继续在文件查找一下行，如果找到，请将这一行注释（行首加上"#"）。
+先不要退出这个配置文件，继续在文件查找下面这一行，如果找到，请将这一行注释（行首加上"#"）。
 {% highlight bash %}
 require-mppe-128
 {% endhighlight %}
