@@ -31,12 +31,13 @@ active: articles
       <div class="page-num">
         Page <span>{{ paginator.page }}</span> of <span>{{ paginator.total_pages }}</span>
       </div>
-      {% assign link = "/articles/page-{{ paginator.previous_page }}/" %}
       {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-      {% assign link = "/articles/" %}
+      <a href="/articles/" class="pag-btn">&lt;&lt;Previews</a>
+      {% else %}
+      <a href="/articles/page-{{ paginator.previous_page }}/" class="pag-btn">&lt;&lt;Previews</a>
       {% endif %}
-      <a href="{{ link }}" class="pag-btn">&lt;&lt;Previews</a>
+      
       {% else %}
       <span class="pag-btn">&lt;&lt;Previews</span>
       {% endif%}
