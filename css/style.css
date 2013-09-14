@@ -6,16 +6,34 @@ body{
   font-family: 'Open Sans', sans-serif, tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;;
   background-color: rgb(245, 249, 255);
 }
+.post code{
+  font-family: 'Oxygen Mono', sans-serif;
+}
+.post blockquote{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 40px;
+    background-color: #EFEFFF;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 15px solid #FFF;
+}
 .highlight{
-   -webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-   border-radius: 10px;
-   background-color: #EEE;
-   padding-top: 1px;
-   padding-left: 20px;
-   padding-bottom: 1px;
-   color: black;
-   border:2px solid white;
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border-radius: 20px;
+ background-color: #FFF;
+ padding-top: 1px;
+ padding-left: 20px;
+ padding-bottom: 1px;
+ color: #000;
+ border: 10px solid #F5F5F5;
 }
 .highlight:before{
 }

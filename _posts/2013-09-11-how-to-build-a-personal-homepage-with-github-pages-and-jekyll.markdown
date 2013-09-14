@@ -44,7 +44,7 @@ $ sed -i 's!ftp.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/
 $ rvm install ruby
 {% endhighlight %}
 静静地等待吧，首先会下载一些依赖，然后安装最新版本的 Ruby ,安装完成后运行 *ruby -v* ，如果输出版本号，那么恭喜你，证明安装成功了！
-##二、安装静态网站生成器Jekyll
+##二、安装静态网站生成器 Jekyll
 在安装 Jekyll 之前，请确认系统已经拥有 Ruby 环境，因为 Jekyll 是由 Ruby 编写的。接下来又要替换官方 gem 源为淘宝 gem 源，原因和前面一样。 gem 是 Ruby 软件管理器，目的是以统一的方式管理和发布所有用 Ruby 编写的软件。下面的命令可能要执行一分钟左右，请耐心等待。相信我，如果你使用官方源，那个速度绝对会慢得让你无法忍受。
 {% highlight bash %}
 $ gem source -r https://rubygems.org/
@@ -56,7 +56,7 @@ $ gem install jekyll
 {% endhighlight %}
 准备好了吗？让我们开始第一个 Hello World 吧！
 ##三、Hello World,My Blog!
-你会发现第一个例子竟然如此简单！打开命令行，切换路径至你想要存放你的网站的目录，输入一下命令：
+你会发现第一个例子竟然如此简单！打开命令行，切换路径至你想要存放你的网站的目录，输入以下命令：
 {% highlight bash %}
 $ jekyll new jason-blog
 $ cd jason-blog
@@ -68,8 +68,32 @@ $ jekyll server -w
 也许你对这个页面还心存疑惑：“我没有写一行代码，怎么就出现这些内容了？”，“我如何去控制生成的内容呢？”。没错，一个真正的博客远不止于此，接下来，我会简单配置一下这个博客,如果你想了解更多，请参阅 [Jekyll Homepage][jekyll home] 。
 
 ##四、配置 Github SSH 密钥
+>请确保你操作这一步之前已经[注册][github sign up]了一个 Github 帐号
 >如果你之前已经已经配置好和 Github 的基于密钥对的 SSH 连接，请跳过这一小节
-
+###step1:
+ 首先，请确定你的Ubuntu上是否已经存在一对密钥。
+{% highlight bash %}
+$ cd ~/.ssh
+$ ls
+{% endhighlight %}
+如果输出中包括 *id_rsa.pub* 或 *id_dsa.pub* 文件，那么说明你的系统之前已经存在一对密钥了，你可以利用这对密钥，直接跳至 step3 。否则，你就需要手动生成一对密钥，请跳至 step2 。
+###step2:
+生成 RSA 密钥对：
+{% highlight bash %}
+$ ssh-keygen -t rsa -C "your_email@example.com"
+{% endhighlight %}
+在这过程中，程序会询问你密钥放置路径和为这对密钥再设置一个密码（如果设置了密码，那么以后即使使用这对密钥仍然会要求输入该密码）。为了使我们的例子尽可能简单，请直接按回车键，这意味着生成的密钥将直接存放至当前工作目录，同时放弃为这对密钥设置密码。
+###step3:
+无论你是之前已经拥有的密钥或是刚刚生成的密钥，这个密钥其实是一对，分为公钥与私钥。自己保留私钥，把公钥交给 Github ,以便完成本机和 Github 服务器之间项目更新时的加密的 SSH 连接。于是这里涉及到一个操作就是把公钥告知 Github。我们需要安装一个辅助程序 *xclip*：
+{% highlight bash %}
+$ sudo apt-get install xclip # Downloads and installs xclip. If you don't have `apt-get`, you might need to use another installer (like `yum`)
+$ xclip -sel clip < ~/.ssh/id_rsa.pub # Copies the contents of the id_rsa.pub file to your clipboard
+{% endhighlight %}
+然后进入 Github 的 [SSH Keys Setting][ssh key setting]，点击 *Add SSH key*,在 *Title* 里为这个 Key 起一个名字，然后在 *Key* 框里粘贴。（到这里也许你明白了，*xclip* 的作用其实就是把一个文件的内容粘贴到剪切版，同时避免了引入不必要的换行等其它空白符）。完成之后，点击 *Add key* 就完成了对公钥的添加。让我们测试一下连接：
+{% highlight bash %}
+$ ssh -T git@github.com
+{% endhighlight %}
+如果显示 “Hi xxxxxx! You've successfully authenticated, but GitHub does not provide shell access.” 那么说明配置成功，否则请按照上述步骤重新配置。
 ##五、在 Github 上新建项目
 
 ##六、上传博客
@@ -80,6 +104,9 @@ $ jekyll server -w
 1.Ruby-China Wiki,[Install Ruby](http://ruby-china.org/wiki/install_ruby_guide)
 2.阮一峰,[搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
 3.[Jekyll Documentation](http://jekyllrb.com/docs/home/)
+4.Github Help,[Generating SSH Keys](https://help.github.com/articles/generating-ssh-keys)
 
 [rvm]: http://rvm.io "rvm homepage"
 [jekyll home]: http://jekyllrb.com/ "jekyll homepage"
+[github sign up]: http://github.com "github"
+[ssh key setting]: https://github.com/settings/ssh "ssh key setting"
