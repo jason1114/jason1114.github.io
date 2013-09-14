@@ -24,7 +24,7 @@ active: articles
       <span><a href="/articles/{{ c }}">{{ c }}</a></span> 
       
       {% endfor %}</div>
-        <a href="{{ post.url}}"><img class="thumbnail" src="http://carpenter-thumbs.qiniudn.com/{{ post.url | split: '/' | last |remove: '.html'}}.jpg"></a>
+        <a href="{{ post.url}}"><img class="thumbnail" src="{{ site.thumbs }}/{{ post.url | split: '/' | last |remove: '.html'}}.jpg"></a>
         <p>{{ post.abstract }} <a href="{{ post.url}}">[...]</a></p>
       </section>
       
