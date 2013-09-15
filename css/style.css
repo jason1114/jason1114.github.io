@@ -409,8 +409,9 @@ styles for articles
   background-color: #EBE9E9;
   padding-left: 6px;
   padding-right: 6px;
-  padding-top: 3px;
+  padding-top: 0px;
   padding-bottom: 3px;
+  margin-bottom: 1px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
