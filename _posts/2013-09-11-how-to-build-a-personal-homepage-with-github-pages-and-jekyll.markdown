@@ -105,7 +105,7 @@ Hello World! This is my first blog!^_^
 ![]({{ site.images }}/jason-blog-2.png "jason blog")
 
 博客简单的设置到此为止，使用 Git 保存工作进度：
-{% highlight html %}
+{% highlight bash %}
 $ git add .
 $ git commit -m "jason blog init"
 {% endhighlight %}
