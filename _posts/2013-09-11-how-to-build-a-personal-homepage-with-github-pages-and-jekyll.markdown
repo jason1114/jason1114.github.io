@@ -34,7 +34,7 @@ abstract: |
 $ sudo apt-get install curl    #if you already installed curl,skip this step
 $ curl -L https://get.rvm.io | bash -s stable
 {% endhighlight %}
-打开一个新的命令行终端,把 RVM 默认安装源从官方源替换成国内的淘宝源，国外源国内访问不稳定，至于原因，你懂得。
+打开一个新的命令行终端,把 RVM 默认安装源从官方源替换成国内的淘宝源，国外源国内访问不稳定，至于原因，你懂的。
 {% highlight bash %}
 $ source ~/.rvm/scripts/rvm  #load variables about rvm
 $ sed -i 's!ftp.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
@@ -45,7 +45,7 @@ $ rvm install ruby
 {% endhighlight %}
 静静地等待吧，首先会下载一些依赖，然后安装最新版本的 Ruby ,安装完成后运行 *ruby -v* ，如果输出版本号，那么恭喜你，证明安装成功了！
 ##二、安装静态网站生成器 Jekyll
-在安装 Jekyll 之前，请确认系统已经拥有 Ruby 环境，因为 Jekyll 是由 Ruby 编写的。接下来又要替换官方 gem 源为淘宝 gem 源，原因和前面一样。 gem 是 Ruby 软件管理器，目的是以统一的方式管理和发布所有用 Ruby 编写的软件。下面的命令可能要执行一分钟左右，请耐心等待。相信我，如果你使用官方源，那个速度绝对会慢得让你无法忍受。
+在安装 Jekyll 之前，请确认系统已经拥有 Ruby 环境，因为 Jekyll 是由 Ruby 编写的。首先还是要替换官方 gem 源为淘宝 gem 源，原因和前面一样。 gem 是 Ruby 软件管理器，目的是以统一的方式管理和发布所有用 Ruby 编写的软件。下面的命令可能要执行一分钟左右，请耐心等待。相信我，如果你使用官方源，那个速度绝对会慢得让你无法忍受。
 {% highlight bash %}
 $ gem source -r https://rubygems.org/
 $ gem source -a http://ruby.taobao.org
@@ -72,25 +72,25 @@ $ jekyll server -w
 刚刚创建的博客的目录结构如图所示，简要介绍一下每一部分：
 ![]({{ site.images }}/jason-blog-structure.png "jason blog")
 
-1. gitignore 文件： 项目中应该被 Git 忽略的文件，本项目中应为 *_site* 目录下的所有文件。
-2. _config.yml 文件： 整站配置文件，也可以加入用户自定义的配置。
+1. gitignore 文件： 项目中应该被 Git 忽略的文件，本项目中应为 *\_site* 目录下的所有文件。
+2. \_config.yml 文件： 整站配置文件，也可以加入用户自定义的配置。
 3. index.html 文件： 在静态网站中，*index.html* 一般会被服务器当作首页。
-4. _layouts 文件夹： 默认的布局文件目录，布局网页提取所有网页中相同的部分，使用变量表示相似的部分，所有其它的网页只需要引用布局文件，并且为布局文件中定义的变量传入实际参数就可以轻松渲染出一个页面，布局也可以嵌套，从而静态页面也能达到和动态页面一样的灵活和抽象程度。
-5. _posts 文件夹： 默认存放博文的目录。
-6. _site 文件夹： 通过 Jekyll 渲染后的所有静态页面存放的目录，一般不需要去管它，默认被版本控制忽略。
-7. css 文件夹： 默认存放 *css* 的文件夹。所有不以 "_" 开头的文件和文件夹及里面的内容都会经 Jekyll 渲染后直接拷贝至 *_site* 文件夹，所以你也可以自己定义常用的网站目录例如 *js* / *images* / *flash* 等。
+4. \_layouts 文件夹： 默认的布局文件目录，布局网页提取所有网页中相同的部分，使用变量表示相似的部分，所有其它的网页只需要引用布局文件，并且为布局文件中定义的变量传入实际参数就可以轻松渲染出一个页面，布局也可以嵌套，从而静态页面也能达到和动态页面一样的灵活和抽象程度。
+5. \_posts 文件夹： 默认存放博文的目录。
+6. \_site 文件夹： 通过 Jekyll 渲染后的所有静态页面存放的目录，一般不需要去管它，默认被版本控制忽略。
+7. css 文件夹： 默认存放 *css* 的文件夹。所有不以 "_" 开头的文件和文件夹及里面的内容都会经 Jekyll 渲染后直接拷贝至 *\_site* 文件夹，所以你也可以自己定义常用的网站目录例如 *js* 、 *images* 、 *flash* 等。
 
-打开 *_config* 文件 修改 *name* 为你的博客的名字，例如 *Jason's Blog* 。打开 *_layouts/default.html* 文件，你会发现有下面这一行：
+打开 *\_config* 文件 修改 *name* 为你的博客的名字，例如 *Jason's Blog* 。打开 *\_layouts/default.html* 文件，你会发现有下面这一行：
 {% highlight html %}
-<h1 class="title"><a href="/">{{ site.name }}</a></h1>
+<h1 class="title"><a href="/">{{ "{{ site.name " }}}}</a></h1>
 {% endhighlight %}
 刚才在配置文件中配置的的博客名变量，就这样被带入到页面中，你也可以在配置文件中添加自己的变量，然后在任意的页面中引用，Jekyll 使用的模板引擎是 [Liquid][liquid help],掌握 Liquid 的语法后，你能使静态页面更加灵活，更加能适应变化，而不是总是 "Copy-Paste" 。
 
 *defualt.html* 是默认的布局，在本例中，其它模板都引用这个布局，所以只要修改这个布局，整个站点所有页面相似的部分都会随之改变。所以，在这个页面中，加入 Email 等你自己的元素吧。修改完大致类似如图所示：
 ![]({{ site.images }}/jason-blog-1.png "jason blog")
 
-下面新建一篇新博文，在 *_posts* 文件夹下新建文件 *2013-09-15-hello-world.markdown*,在文件中粘贴以下内容：
-{% highlight html %}
+下面新建一篇新博文，在 *\_posts* 文件夹下新建文件 *2013-09-15-hello-world.markdown*,在文件中粘贴以下内容：
+{% highlight markdown %}
 ---
 layout: post
 title:  "Hello World!"
@@ -100,10 +100,10 @@ categories: hello world
 
 Hello World! This is my first blog!^_^
 {% endhighlight %}
-首先，这个文件是 [Markdown][markdown] 格式， Markdown 使用更简洁的语法来简化 HTML 的编写，但是这个文件最终会被渲染成 HTML 放入 *_site* 文件夹。这个文件的头部包括一些元信息，使用布局为 post (位于默认的 *_layouts/post.html* ),标题为 “Hello World!”，写作时间，所属标签。保存之后，就能看到刚刚写的这篇博客了。
+首先，这个文件是 [Markdown][markdown] 格式， Markdown 使用更简洁的语法来简化 HTML 的编写，但是这个文件最终会被渲染成 HTML 放入 *\_site* 文件夹。这个文件的头部包括一些元信息，使用布局为 post (位于默认的 *\_layouts/post.html* ),标题为 “Hello World!”，另外还有写作时间，所属标签。保存之后，就能看到刚刚写的这篇博客了。
 ![]({{ site.images }}/jason-blog-2.png "jason blog")
 
-博客简单的设置到此位置，接下来使用 Git 保存工作进度：
+博客简单的设置到此为止，使用 Git 保存工作进度：
 {% highlight html %}
 $ git add .
 $ git commit -m "jason blog init"
@@ -112,6 +112,7 @@ $ git commit -m "jason blog init"
 
 ##四、配置 Github SSH 密钥
 >请确保你操作这一步之前已经[注册][github]了一个 Github 帐号
+> 
 >如果你之前已经已经配置好和 Github 的基于密钥对的 SSH 连接，请跳过这一小节
 ###step1:
  首先，请确定你的Ubuntu上是否已经存在一对密钥。
@@ -119,7 +120,7 @@ $ git commit -m "jason blog init"
 $ cd ~/.ssh
 $ ls
 {% endhighlight %}
-如果输出中包括 *id_rsa.pub* 或 *id_dsa.pub* 文件，那么说明你的系统之前已经存在一对密钥了，你可以继续利用这对密钥，直接跳至 step3 。否则，你就需要手动生成一对密钥，请跳至 step2 。
+如果输出中包括 *id_rsa.pub* 或 *id_dsa.pub* 文件，那么说明你的系统之前已经存在一对密钥了，你可以继续利用这对密钥，并跳至 step3 。否则，你就需要手动生成一对密钥，请跳至 step2 。
 ###step2:
 生成 RSA 密钥对：
 {% highlight bash %}
@@ -150,10 +151,10 @@ $ git push -u origin gh-pages
 >1. 只有这个项目的 *gh-pages* 分支上的内容才会被 Github Pages 当成网站内容。
 >2. Github Pages 支持 Jekyll ，所以可以直接上传整个 Jekyll 项目。
 
-赶紧打开浏览器，查看你的网站吧！ *xxxx.github.io/jason-blog*，替换 xxxx 为你的 Github 用户名。
+赶紧打开浏览器，查看你的网站吧！ *http://xxxx.github.io/jason-blog*，替换 xxxx 为你的 Github 用户名。
 ![]({{ site.images }}/jason-blog-3.png "jason blog")
 
-你的博客成功上传了，但是你会发现网站的样式丢失了，仔细查看 *_layouts/default.html* 会发现下面这几行：
+你的博客成功上传了，但是你会发现网站的样式丢失了，仔细查看 *\_layouts/default.html* 会发现下面这几行：
 {% highlight html %}
 <!-- syntax highlighting CSS -->
 <link rel="stylesheet" href="/css/syntax.css">
@@ -161,12 +162,14 @@ $ git push -u origin gh-pages
 <!-- Custom CSS -->
 <link rel="stylesheet" href="/css/main.css">
 {% endhighlight %}
-原来是这样，本地调试的时候，*localhost* 相当与一个顶级域名，而 Github 为网站提供的不是一个顶级域名，于是这个网站就出现了本地调试和上传后 css 实际引用路径不一致的问题。解决方案有许多，其中之一就是为这个博客绑定一个顶级域名，这在随后的第六小节中会介绍。
+原来是这样，本地调试的时候，*localhost* 相当于一个顶级域名，而 Github 为网站提供的不是一个顶级域名，于是这个网站就出现了本地调试和上传后 css 实际引用路径不一致的问题。解决方案有许多，其中之一就是为这个博客绑定一个域名，这在随后的第六小节中会介绍。
 
+至此，博客搭建顺利完成，就从这个 Hello World 开始慢慢丰富你的站点内容吧！ Have Fun!
 ##六、其它
-域名绑定
-评论
-CDN加速
+###1.域名绑定
+Github Pages 目前支持绑定自定义域名，你可以购买收费域名，或者使用免费域名，本站使用免费的 [TK][tk] 域名。绑定域名的方法请参阅参考资料。
+###2.添加评论
+因为全站静态，为了给博客添加评论，所以只能使用基于 JS 的第三方评论服务。国外比较流行的有 [Disqus][disqus] ，国内比较流行的有 [多说][duoshuo] 、 [友言][youyan] 等，本站使用多说，评论托管对我来说为我节省了很多精力，而且使用简单，何乐而不为？^0^
 ##参考资料
 1. Ruby-China Wiki,[Install Ruby](http://ruby-china.org/wiki/install_ruby_guide)
 2. 阮一峰,[搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
@@ -174,6 +177,7 @@ CDN加速
 4. Github Help,[Generating SSH Keys](https://help.github.com/articles/generating-ssh-keys)
 5. [Liquid for Designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)
 6. Daring Fireball,[Markdown][markdown]
+7. Github Help,[Setting up a custom domain with pages][github pages domain]
 
 [rvm]: http://rvm.io "rvm homepage"
 [jekyll home]: http://jekyllrb.com/ "jekyll homepage"
@@ -181,3 +185,8 @@ CDN加速
 [ssh key setting]: https://github.com/settings/ssh "ssh key setting"
 [liquid help]: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers "liquid help"
 [markdown]: daringfireball.net/projects/markdown/‎ "markdown"
+[github pages domain]: https://help.github.com/articles/setting-up-a-custom-domain-with-pages "custom domain"
+[tk]: http://www.dot.tk "tk"
+[disqus]: http://disqus.com/‎ "disqus"
+[duoshuo]: http://duoshuo.com/‎ "duoshuo"
+[youyan]: http://www.jiathis.com/ "youyan"
