@@ -9,6 +9,7 @@ abstract: |
 ---
 ##引言
 在网络上，很多人都有浏览网络日志的习惯，也有很多人自己就拥有个人站点，在自己的站点里写博客。不光是文化界，科技界也十分盛行网络日志，我的 Feedly 订阅中就包含了许多科技名人和技术高手的博客站点。在国外，技术博客之风更为盛行，最近几年博客程序 Wordpress 在圈子里很流行，它的界面友好，操作简单，易于扩展，功能强大且主题丰富，没有任何编程基础的人甚至都能轻松搭建起一个个人博客。
+
 ![]({{ site.images }}/github-pages-blog.jpg "personal blog")
 
 最近，国外出现有许多精英程序员和 Hacker 开始利用 Github Pages 搭建自己的博客。 Github 是国外非常流行的基于版本控制系统 Git 的项目托管网站，有“程序员的 Facebook ”之称， Github Pages 是 Github 推出的一项静态网页托管服务，旨在为 Github 上的项目提供一个免费的、无限流量的静态项目主页。利用这一项服务，我们可以使用一些静态网页生成工具，例如 Jekyll ，在 Github 上搭建一个自己的免费个人博客。与 Wordpress 相比，这类博客有以下优点：
@@ -90,7 +91,7 @@ $ jekyll server -w
 ![]({{ site.images }}/jason-blog-1.png "jason blog")
 
 下面新建一篇新博文，在 *\_posts* 文件夹下新建文件 *2013-09-15-hello-world.markdown*,在文件中粘贴以下内容：
-{% highlight markdown %}
+{% highlight html %}
 ---
 layout: post
 title:  "Hello World!"
@@ -104,7 +105,7 @@ Hello World! This is my first blog!^_^
 ![]({{ site.images }}/jason-blog-2.png "jason blog")
 
 博客简单的设置到此为止，使用 Git 保存工作进度：
-{% highlight html %}
+{% highlight bash %}
 $ git add .
 $ git commit -m "jason blog init"
 {% endhighlight %}
