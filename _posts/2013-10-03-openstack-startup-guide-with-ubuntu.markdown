@@ -19,6 +19,69 @@ OpenStack 是由 [Rackspace][rackspace] 和 [NASA][nasa] 共同主持下开展�
 1. [Ubuntu Server 12.04 LTS AMD64 ISO][ubuntu server 12.04].虚拟机使用的服务器操作系统，请严格使用此版本，如果使用其他版本（例如 12.04.2,12.04.3,12.04.4 都将因为配置方法不同导致本文后面的操作失败）。
 2. [Ubuntu Desktop 12.04 LTS AMD64 ISO ][ubuntu desktop 12.04].物理机的操作系统，如果没有安装这个系统，请下载镜像安装，不要在虚拟机里安装，因为本身这个操作系统还要跑虚拟机，所以为了使得性能下降得不是太严重，请正常硬盘安装此系统。
 3. [Ubuntu Server 12.04 Cloud Image][ubuntu server 12.04 cloud image].云实例使用的操作系统，Ubuntu 社区改良后适宜于运行在云端的 Ubuntu 。
+##物理主机(Ubuntu Desktop 12.04.0)配置
+
+>提示：在执行所有操作之前，请更换一个速度更快的更新源。
+
+首先下载一个最新的虚拟机软件 [Virtual Box][virtual box download] ，选择适合的版本（Ubuntu 12.04,AMD64）,这样就得到了所需的 DEB 安装包，在安装之前，确保 Virtual Box 用来编译内核的环境已经存在。
+{% highlight bash%}
+sudo apt-get -y install gcc g++ make
+{% endhighlight %}
+完成之后，安装此软件包。请不要尝试从 APT 安装 Virtual Box，该版本的 Ubuntu 更新源中的 Virtual Box 存在缺陷。
+
+接下来，需要为即将创建的虚拟机提供配置参数。
+{% highlight bash %}
+# Public Network vboxnet0 (172.16.0.0/16)
+VBoxManage hostonlyif create
+VBoxManage hostonlyif ipconfig vboxnet0 --ip 172.16.0.254 --netmask 255.255.0.0
+# Private Network vboxnet1 (10.0.0.0/8)
+VBoxManage hostonlyif create
+VBoxManage hostonlyif ipconfig vboxnet1 --ip 10.0.0.254 --netmask 255.0.0.0
+
+# Create VirtualBox Machine
+VBoxManage createvm --name openstack1 --ostype Ubuntu_64 --register
+VBoxManage modifyvm openstack1 --memory 2048 --nic1 nat --nic2 hostonly --hostonlyadapter2 vboxnet0 --nic3 hostonly --hostonlyadapter3 vboxnet1
+
+# Create CD-Drive and Attach ISO
+VBoxManage storagectl openstack1 --name "IDE Controller" --add ide --controller PIIX4 --hostiocache on --bootable on
+VBoxManage storageattach openstack1 --storagectl "IDE Controller" --type dvddrive --port 0 --device 0 --medium ~/Downloads/ubuntu-12.04-server-amd64.iso
+
+# Create and attach SATA Interface and Hard Drive
+VBoxManage storagectl openstack1 --name "SATA Controller" --add sata --controller IntelAHCI --hostiocache on --bootable on
+VBoxManage createhd --filename openstack1.vdi --size 81920
+VBoxManage storageattach openstack1 --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium openstack1.vdi
+
+# Start the VM
+VBoxManage startvm openstack1 --type gui
+{% endhighlight %}
+上面这段代码，请保存成为可执行的 .sh 文件，并且修改代码中 Ubuntu 镜像的路径，然后在终端中执行。这段代码作用如下：
+
+
+1. 创建虚拟网络 *vboxnet0* (172.16.0.0/16) ，物理主机加入此虚拟网络并设定固定 IP。
+2. 创建虚拟网络 *vboxnet1* (10.0.0.0/8) ，物理主机加入此虚拟网络并设定固定 IP。
+3. 创建 Ubuntu 虚拟机，该虚拟机分配 *2G* 内存，并依次加入3个虚拟网络（拥有3个虚拟网卡）：物理主机和虚拟主机之间 NAT 网络（用于上网），vboxnet0 和 vboxnet1。
+4. 为虚拟机创建虚拟光驱，并且把 Ubuntu 镜像挂载到此虚拟光驱上，便于首次启动时安装操作系统
+5. 为此虚拟机创建一块 *40G* 的虚拟 SATA 硬盘，当然如果更大那更加好。
+6. 启动此虚拟机。
+
+这个时候，在 Virtual Box 虚拟机窗口应该就会出现 Ubuntu Server 基于字符界面的安装向导了，为了后面操作的方便，安装的时候需要注意：
+1. 语言选择英文
+2. *Locale* 选择 *HongKong*
+3. *Primary network interface* 选择 *eth0*
+4. 创建的用户名和密码均为 *openstack*
+5. *Partitioning method* 选择 *Guided - use entire disk and set up LVM*
+6. 更新选项选择 *No automatic updates*
+7. 选择预装的软件的时候使用空格键选择 *OpenSSH server*
+
+安装完成之后，虚拟机就会自动重启，很快你就能看到基于字符的登录界面了，用户名密码均为 *openstack* ，接下来将进入虚拟机配置环节。
+
+##虚拟主机(Ubuntu Server 12.04.0)配置
+
+>提示：在执行所有操作之前，请更换一个速度更快的更新源。
+
+>执行本节操作之前，请确认虚拟主机操作系统严格为 Ubuntu Server 12.04.0 AMD64
+
+
 ##参考资料
 1. Kevin Jackson, OpenStack Cloud Computing Cookbook
 
@@ -28,3 +91,4 @@ OpenStack 是由 [Rackspace][rackspace] 和 [NASA][nasa] 共同主持下开展�
 [ubuntu server 12.04]: http://old-releases.ubuntu.com/releases/12.04.0/ubuntu-12.04-server-amd64.iso
 [ubuntu desktop 12.04]: http://old-releases.ubuntu.com/releases/12.04.0/ubuntu-12.04-desktop-amd64.iso
 [ubuntu server 12.04 cloud image]: http://cloud-images.ubuntu.com/precise/current/precise-server-cloudimg-amd64.tar.gz
+[virtual box download]:https://www.virtualbox.org/wiki/Downloads
