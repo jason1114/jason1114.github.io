@@ -73,6 +73,9 @@ hr{
 .cn p{
   text-indent: 2em;
 }
+.cn ol p{
+  text-indent: 0;
+}
 img{
   border:0;
 }
@@ -178,6 +181,7 @@ header .primary-link {
 .header-top{
   /*background-color: white;*/
 }
+
 .header{
   /*background-color: white;*/
 }
