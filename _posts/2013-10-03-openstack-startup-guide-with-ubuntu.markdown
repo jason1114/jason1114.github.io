@@ -152,8 +152,142 @@ $ mysql -uroot -p$MYSQL_PASS -e 'CREATE DATABASE nova;'
 $ mysql -uroot -p$MYSQL_PASS -e "GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'%'"
 $ mysql -uroot -p$MYSQL_PASS -e "SET PASSWORD FOR 'nova'@'%' = PASSWORD('$MYSQL_PASS');"
 {% endhighlight %}
+上面的一系列命令的意思为，为 MySQL 数据库的 ROOT 用户设定密码为 openstack,同时为名为 nova 的用户足够的权利访问名为 nova 的数据库（当然前提是先创建好 nova 数据库）。
+
+通过 APT 安装的 nova 还需要进行一定的设置，配置文件位于 */etc/nova/nova.conf* ,请复制下面的配置信息覆盖原来的配置文件。
+{% highlight bash %}
+--dhcpbridge_flagfile=/etc/nova/nova.conf
+--dhcpbridge=/usr/bin/nova-dhcpbridge
+--logdir=/var/log/nova
+--state_path=/var/lib/nova
+--lock_path=/var/lock/nova
+--force_dhcp_release
+--iscsi_helper=tgtadm
+--libvirt_use_virtio_for_bridges
+--connection_type=libvirt
+--root_helper=sudo nova-rootwrap
+--ec2_private_dns_show_ip
+--sql_connection=mysql://nova:openstack@172.16.0.1/nova
+--use_deprecated_auth
+--s3_host=172.16.0.1
+--rabbit_host=172.16.0.1
+--ec2_host=172.16.0.1
+--ec2_dmz_host=172.16.0.1
+--public_interface=eth1
+--image_service=nova.image.glance.GlanceImageService
+--glance_api_servers=172.16.0.1:9292
+--auto_assign_floating_ip=true
+--scheduler_default_filters=AllHostsFilter
+{% endhighlight %}
+
+另外还有一个需要增加的配置文件，打开 */etc/nova/nova-compute.conf* 文件，把下面这行内容替换原文件内容。
+{% highlight bash %}
+--libvirt_type=qemu
+{% endhighlight %}
+
+接下来，在修改完 nova 配置之后，要使数据库和 nova 同步，还要为 nova 之后生成的实例分配 ip 。
+{% highlight bash %}
+$ sudo nova-manage db sync
+$ sudo nova-manage network create vmnet --fixed_range_v4=10.0.0.0/8 --network_size=64 --bridge_interface=eth2
+$ sudo nova-manage floating create --ip_range=172.16.1.0/24
+{% endhighlight %}
+
+重启 OpenStack 服务。
+{% highlight bash %}
+$ sudo stop nova-compute
+$ sudo stop nova-network
+$ sudo stop nova-api
+$ sudo stop nova-scheduler
+$ sudo stop nova-objectstore
+$ sudo stop nova-cert
+
+$ sudo stop libvirt-bin
+$ sudo stop glance-registry
+$ sudo stop glance-api
+
+$ sudo start nova-compute
+$ sudo start nova-network
+$ sudo start nova-api
+$ sudo start nova-scheduler
+$ sudo start nova-objectstore
+$ sudo start nova-cert
+
+$ sudo start libvirt-bin
+$ sudo start glance-registry
+$ sudo start glance-api
+{% endhighlight %}
+
+接下来，需要为访问 nova 服务建立个帐号。
+
+{% highlight bash %}
+sudo nova-manage user admin openstack
+sudo nova-manage role add openstack cloudadmin
+sudo nova-manage project create cookbook openstack
+sudo nova-manage project zipfile cookbook openstack
+{% endhighlight %}
+
+新建的帐号 openstack 属于管理员用户组，并且为这个帐号创建了一个 project 客户端可以通过这个 project 完成身份认证，进而访问 nova 服务，执行完上面的指令后会在当前的工作路径生成一个 *nova.zip* ,这个即为 project ，随后物理机的客户端会下载这个 project ，并且通过它访问 nova 服务。
+
+##冒险开始！
+
+至此，虚拟机上的 OpenStack 服务搭建完毕，客户端已经可以访问 nova 的服务了，这里选择物理机上的 Ubuntu 作为客户端（以下的命令都是在物理机上运行的），不过在此之前，客户端还是需要安装访问 nova 需要的客户端工具。
+{% highlight bash %}
+$ sudo apt-get install euca2ools python-novaclient unzip cloud-utils
+{% endhighlight %}
+
+通过 SSH 下载虚拟机上的 nova.zip 文件,并解压。
+{% highlight bash %}
+$ cd
+$ mkdir openstack
+$ cd openstack
+$ scp openstack@172.16.0.1:nova.zip . 
+$ unzip nova.zip
+$ . novarc
+$ nova keypair-add openstack > openstack.pem
+$ sudo chmod 0600 *.pem
+{% endhighlight %}
+最后3行有必要解释一下。 *novarc* 是通过 nova.zip 解压得到，包含了访问 nova 服务的必要信息，其中也包括帐号信息， *. novarc* 是把这些信息加载到环境变量，以便客户端工具能够访问这些信息并获取访问 nova 服务的权限。随后生成一对非对称密钥 *openstack* ,并且赋予适当的访问权限。
+
+还记得前面提到的 [Ubuntu Server 12.04 Cloud Image][ubuntu server 12.04 cloud image] 吗，这个镜像里的操作系统就是云实例的操作系统。在运行第一个实例之前要先把这个镜像上传到 nova (注意镜像的路径)。
+{% highlight bash %}
+$ cloud-publish-tarball ubuntu-12.04-server-cloudimg-i386.tar.gz images i386
+{% endhighlight %}
+上传成功后可以通过 *nova image-list* 命令来查看已经上传的镜像。如下图所示
+![]({{ site.images }}/openstack-nova-image-list.png "nova image list")
+
+到这里距离真正跑一个实例还剩最后一步：设置 *security group* ,通常意义上也可以认为是防火墙。
+
+{% highlight bash %}
+$ nova secgroup-add-rule default tcp 22 22 0.0.0.0/0
+$ nova secgroup-add-rule default icmp -1 -1 0.0.0.0/0
+{% endhighlight %}
+这里设置的是一个默认的 default 如果新建一个实例的时候没有指定特定的 *security group* ，那么则默认为 default 。这两行是为实例开放了 SSH 端口访问和 PING 端口访问。
+
+启动吧，第一个例子！
+{% highlight bash %}
+$ nova boot myInstance --image d8cd517a-2a6d-4462-9db2-b107886c3279 --flavor 2 --key_name openstack
+{% endhighlight %}
+*myInstance* 是实例的名称，*--image* 后面的一串数字是上传镜像后镜像对应的 ID ，而 *--keyname* 则是之前生成的那对非对称密钥的路径，*--flavor* 可以认为是为实例分配计算配额（CPU、RAM）的级别。
+
+使用命令 *nova-list* 可以查看所有实例的运行状态，当刚刚运行的实例状态从 *BUILD* 变成 *ACTIVE* 时，就可以通过 SSH 登录这个云端实例了！
+
+> 这一步如果实例的状态为 ERROR,请尝试之前重启所有 OpenStack 服务的步骤。
+
+{% highlight bash %}
+$ ssh -i openstack.pem ubuntu@172.16.1.1
+{% endhighlight %}
+
+同样，*openstack.pem* 属于之前生成的那对非对称密钥，注意具体引用路径。
+
+云实例就和普通的操作系统一样，你可以在上面干绝大多数事情，比如部署你的应用，部署数据库服务器等。
+
+但是云主机还有一个好处，那就是虚拟机可以随时收回重新分配。当你玩得差不多了，只需要一个命令，刚刚创建的那个实例可以立刻消失。
+{% highlight bash %}
+$ nova delete myInstance
+{% endhighlight %}
+
 ##参考资料
-1. Kevin Jackson, OpenStack Cloud Computing Cookbook
+1. Kevin Jackson, 《OpenStack Cloud Computing Cookbook》
 
 [rackspace]: http://www.rackspace.com "Rackspace"
 [nasa]: http://www.nasa.gov "NASA"
