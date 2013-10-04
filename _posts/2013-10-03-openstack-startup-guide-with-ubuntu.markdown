@@ -81,7 +81,77 @@ VBoxManage startvm openstack1 --type gui
 
 >执行本节操作之前，请确认虚拟主机操作系统严格为 Ubuntu Server 12.04.0 AMD64
 
+在前面的配置中，虚拟主机拥有三块虚拟网卡，分别加入了三个虚拟网络，在这里我们要对这三个网络进行具体的配置：
+{% highlight bash %}
+# The loopback network interface
+auto lo
+iface lo inet loopback
 
+# The primary network interface
+auto eth0
+iface eth0 inet dhcp
+
+# Public Interface
+auto eth1
+iface eth1 inet static
+  address 172.16.0.1
+  netmask 255.255.0.0
+  network 172.16.0.0
+  broadcast 172.16.255.255
+
+# Private Interface
+auto eth2
+iface eth2 inet manual
+  up ifconfig eth2 up
+{% endhighlight %}
+备份 */etc/network/interfaces* 文件，然后用上面的代码替换之。
+
+在终端中运行下面的命令使配置生效：
+{% highlight bash %}
+$ sudo ifup eth1
+$ sudo ifup eth2
+{% endhighlight %}
+这个时候，可以把虚拟机的窗口最小化了，我们可以通过 SSH 从物理主机登录到虚拟机进行剩下来的操作。这么做主要是因为虚拟机里的操作系统是完全字符界面的，如果一行的输出过多，可能需要借用 *more* 或者 *less* 命令才能看到完整输出。从物理机打开图形的命令行终端 SSH 登录虚拟机则好用得多，而且还方便粘贴命令,下面的命令就可以从物理机登录到虚拟机 SHELL。接下来我们所有的操作都可以通过这个 SHELL 来完成，而不再需要在那个虚拟机窗口的字符界面，当然两者的效果实际上是一样的。
+{% highlight bash %}
+$ ssh openstack@172.16.0.1
+{% endhighlight %}
+
+安装 OpenStack 环境：
+{% highlight bash %}
+sudo apt-get update
+sudo apt-get -y install rabbitmq-server nova-api nova-objectstore nova-scheduler nova-network nova-compute nova-cert glance qemu unzip ntp
+{% endhighlight %}
+接下来，配置 NTP ，NTP 是 UNIX 世界里多台主机之间用来进行时间的同步的工具，打开 */etc/ntp.conf*,找到下面这一行：
+{% highlight bash %}
+server ntp.ubuntu.com
+{% endhighlight %}
+在这一行下面增加2行：
+{% highlight bash %}
+server 127.127.1.0
+fudge 127.127.1.0 stratum 10
+{% endhighlight %}
+重新启动 NTP：
+{% highlight bash %}
+$ sudo service ntp restart
+{% endhighlight %}
+*nova* 就是 OpenStack 中负责建立虚拟机实例的组件， nova 的数据可以保存在 *MySQL* 数据库中，所以要为 nova 安装配置 MySQL。
+{% highlight bash%}
+$ sudo su
+$ cat <<MYSQL_PRESEED | debconf-set-selections
+mysql-server-5.1 mysql-server/root_password password openstack
+mysql-server-5.1 mysql-server/root_password_again password openstack
+mysql-server-5.1 mysql-server/start_on_boot boolean true
+MYSQL_PRESEED
+$ exit
+$ sudo apt-get -y install mysql-server
+$ sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
+$ sudo service mysql restart
+
+$ MYSQL_PASS=openstack
+$ mysql -uroot -p$MYSQL_PASS -e 'CREATE DATABASE nova;'
+$ mysql -uroot -p$MYSQL_PASS -e "GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'%'"
+$ mysql -uroot -p$MYSQL_PASS -e "SET PASSWORD FOR 'nova'@'%' = PASSWORD('$MYSQL_PASS');"
+{% endhighlight %}
 ##参考资料
 1. Kevin Jackson, OpenStack Cloud Computing Cookbook
 
