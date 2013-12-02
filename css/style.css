@@ -513,6 +513,9 @@ styles for articles
 .previous .post-info{
   font-size: 11pt;
 }
+#editor_window{
+  
+}
 @media screen and (min-width: 390px){
   #me_mini{
     display: none;
