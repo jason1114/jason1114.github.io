@@ -1,6 +1,6 @@
 blogListURL = 
-"http://localhost/blog-editor/"
-//"http://bolgeditor.sturgeon.mopaas.com/"
+//"http://localhost/blog-editor/"
+"http://bolgeditor.sturgeon.mopaas.com/"
 $windowClass = $("<link/>").attr("rel","stylesheet").attr("href","/css/themes/umbra/style.css")
 $windowScript = $("<script/>").attr("type","text/javascript").attr("src","/js/jWindow.js")
 $("head").append($windowClass).append($windowScript)
