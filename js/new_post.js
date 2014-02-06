@@ -35,7 +35,7 @@ $(function(){
        var data = e.data
        $(".post").html(e.data['html'])
        $($("#intro h2")[0]).text(data['title'])
-       $("title").text()
+       $("title").text(data['title'])
        $("#post_date").text(data['date'])
        $("#tags").html('')
        for(var i=0;i<data['tags'].length;i++){
