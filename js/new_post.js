@@ -34,7 +34,7 @@ $(function(){
 	var onmessage = function(e) {
        var data = e.data
        $(".post").html(e.data['html'])
-       $($("#intro h2")[0]).text(data['title'])
+       $("#intro h1").text(data['title'])
        $("title").text(data['title'])
        $("#post_date").text(data['date'])
        $("#tags").html('')
@@ -45,6 +45,7 @@ $(function(){
        		$("#tags").append($span)
        		$("#tags").append("\n")
        }
+       load_sidenav()
        $(".highlight").each(function(index,element){
 
        		$(this).load("http://springlin.herokuapp.com/",

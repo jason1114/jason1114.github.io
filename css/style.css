@@ -44,7 +44,7 @@ body{
   margin-left: 0;
   margin-bottom: 3em;
 }
-#wrap-back-top{
+.wrap-back-top{
   display: none;
 }
 .tag_cloud a:hover{
@@ -166,6 +166,9 @@ a:visited{
 }
 #me_mini{
   width: 100%;
+}
+.logo{
+  font-weight: normal;
 }
 .logo a{
   color: rgb(1, 71, 18);
@@ -586,7 +589,7 @@ styles for articles
 
 }
 @media screen and (min-width:980px ){
-  #wrap-back-top{
+  .wrap-back-top{
     display: block;
   }
   .wrap-social{
@@ -740,6 +743,53 @@ styles for articles
 
 
 /*
+  side navbar 
+*/
+#sidenav{
+  position: fixed;
+  bottom: 300px;
+  margin-left: 64px;
+  list-style: none;
+  padding: 0;
+}
+#sidenav li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgb(212, 233, 212);
+  margin-top: 2px;
+  font-size: 10px;
+  width: 200px;
+  color: rgb(95, 138, 114);
+  /* transition */
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+
+  -webkit-border-top-right: 15px;
+  -moz-border-top-right: 15px;
+  border-top-right-radius: 15px;
+
+  -webkit-border-bottom-right-radius: 15px;
+  -moz-border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#sidenav li:hover{
+  background-color: #FF9971;
+  color: white;
+  font-weight: bold;
+  width: 220px;
+}
+/*
 scroll to top button
 */
 #back-top {
@@ -778,6 +828,7 @@ scroll to top button
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
+
 
   /* transition */
   -webkit-transition: 1s;

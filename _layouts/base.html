@@ -69,7 +69,7 @@ In addition, if I send you an email from my personal email address, leave a comm
     </div>
     </div>
   </footer>
-  <div id="wrap-back-top">
+  <div class="wrap-back-top">
     <p id="back-top" style="display:none;">
       <a><span></span>Back to Top</a>    
     </p>
@@ -79,6 +79,22 @@ In addition, if I send you an email from my personal email address, leave a comm
   <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
   <![endif]-->
   <script type="text/javascript">
+  function load_sidenav(){
+    if(!$(".post").length){
+      return ;
+    }
+    var h2_list = $(".post").find("h2")
+    for(var i=0;i<h2_list.length;i++){
+      $li=$("<li/>").text($(h2_list[i]).text())
+      $("#sidenav").append($li)
+    }
+    $("#sidenav li").bind("click",function(){
+      var top = $(".post").find("h2:contains('"+ $(this).text() +"')").offset().top
+      $('html, body').animate({
+          scrollTop: top
+      }, 800);
+    })
+  }
   $(document).ready(function(){
     // hide #back-top first
     $("#back-top").hide();
@@ -89,8 +105,9 @@ In addition, if I send you an email from my personal email address, leave a comm
         var scrollBottom = $(document).height()-$(this).scrollTop()
         if ($(this).scrollTop() > 640 && scrollBottom > 1200) {
           $('#back-top').fadeIn();
+          $('#sidenav').fadeIn();
         } else {
-          $('#back-top').fadeOut();
+          $('#back-top,#sidenav').fadeOut();
         }
       });
       // scroll body to 0px on click
@@ -102,6 +119,8 @@ In addition, if I send you an email from my personal email address, leave a comm
         return false;
       }
       $("#to-top").click(scrollToTop)
+      
+      load_sidenav()
     });
 
   });
