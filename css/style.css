@@ -23,6 +23,13 @@ body{
   to {background-position: bottom center;}
 }
 #image-container{
+  border-top-color: black;
+  border-top-style: solid;
+  border-top-width: 54x;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+
   background-image:url(/images/me.jpg);
   background-size:100%;
   -webkit-animation: slide 15s infinite;
