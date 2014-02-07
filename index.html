@@ -3,9 +3,17 @@ layout: base
 title: 杳杳灵凤，绵绵长归
 active: about
 ---
-<img src="/images/me.jpg" id="me">
-<img src="/images/me_narrow.jpg" id="me_narrow">
-<img src="/images/me_mini.jpg" id="me_mini">
+<!-- <img src="/images/me.jpg" id="me"> -->
+<div id="image-container" style="">
+  <img src="/images/1350x480.png" style="">
+</div>
+<script type="text/javascript">
+  var imgs = ['me-jm.jpg']
+  var idx = Math.floor(imgs.length*Math.random())
+  document.getElementById("image-container").style.backgroundImage = "url(/images/"+imgs[idx]+")"
+</script>
+<!-- <img src="/images/me_narrow.jpg" id="me_narrow">
+<img src="/images/me_mini.jpg" id="me_mini"> -->
 {% include talk_bar.html %}
 <div id="two_column">
   <div class="container-full clear wrap-social pull-right" id="social-left">

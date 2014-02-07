@@ -6,6 +6,41 @@ body{
   font-family: 'Open Sans', sans-serif, tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;;
   background-color: rgb(245, 249, 255);
 }
+
+@-webkit-keyframes slide /* Safari 和 Chrome */
+{
+  from {background-position: top center;}
+  to {background-position: bottom center;}
+}
+@keyframes slide /* Safari 和 Chrome */
+{
+  from {background-position: top center;}
+  to {background-position: bottom center;}
+}
+@-moz-keyframes slide /* Safari 和 Chrome */
+{
+  from {background-position: top center;}
+  to {background-position: bottom center;}
+}
+#image-container{
+  background-image:url(/images/me.jpg);
+  background-size:100%;
+  -webkit-animation: slide 15s infinite;
+  animation: slide 15s infinite;
+  -moz-animation: slide 15s infinite;
+  
+  animation-direction:alternate;
+  -webkit-animation-direction:alternate;
+  -moz-animation-direction:alternate;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+}
+#image-container img{
+  width:90%;
+}
+
 .post code{
   font-family: 'Oxygen Mono', sans-serif;
 }
@@ -221,7 +256,7 @@ header .primary-link {
   margin-right: 8px;
   margin-top: 1em;
 }
-#articles{
+.articles{
   margin-left: 16px;
 }
 #talk-btn:hover{
@@ -616,6 +651,9 @@ styles for articles
     margin-left: 4em;
     margin-right: 4em;
   }
+  #about header .container-full{
+    margin-left: 0;
+  }
   .share_self{
     display: block;
   }
@@ -747,7 +785,7 @@ styles for articles
 */
 #sidenav{
   position: fixed;
-  bottom: 300px;
+  top: 60px;
   margin-left: 64px;
   list-style: none;
   padding: 0;
@@ -762,6 +800,7 @@ styles for articles
   font-size: 10px;
   width: 200px;
   color: rgb(95, 138, 114);
+  list-style-image: url(/images/star.png);
   /* transition */
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
