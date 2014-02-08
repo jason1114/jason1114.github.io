@@ -84,6 +84,7 @@ In addition, if I send you an email from my personal email address, leave a comm
     if(!$(".post").length){
       return ;
     }
+    $("#sidenav").html('')
     var h2_list = $(".post").find("h2")
     for(var i=0;i<h2_list.length;i++){
       $li=$("<li/>").text($(h2_list[i]).text())
