@@ -32,7 +32,7 @@ $(function(){
 		}
 	})
   $(document).keydown(function(event) {
-      if (event.ctrlKey && event.which == 17){
+      if (event.ctrlKey && event.which == 13){
         res_min()
         event.preventDefault();
         return false;
