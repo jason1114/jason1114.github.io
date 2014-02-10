@@ -31,7 +31,28 @@ $(function(){
 			//is_editor_showed = true;
 		}
 	})
+  $(document).keydown(function(event) {
+      if (event.ctrlKey && event.which == 17){
+        res_min()
+        event.preventDefault();
+        return false;
+      }
+  });
+  var max_min_state = "res";
+  function res_min(){
+    if(max_min_state==="res"){
+      w.minimise()
+      max_min_state = "min";
+    }else{
+      w.restore()
+      max_min_state = "res";
+    }
+  }
 	var onmessage = function(e) {
+       if(e.data['cmd']==="res-min"){
+          res_min()
+          return
+       }
        var data = e.data
        $(".post").html(e.data['html'])
        $("#intro h1").text(data['title'])
