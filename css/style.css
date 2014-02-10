@@ -147,6 +147,7 @@ footer input[type="text"] {
   background: rgba(255,255,255,0.5);
   margin: 0 0 10px 0;
   width: 18em;
+  max-width: 80%;
 }
 a{
   color: rgb(1, 71, 18);
