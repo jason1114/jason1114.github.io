@@ -164,7 +164,7 @@ if(root.length){
   })
 
   $("link").each(function(idx,e){
-    if($(e).attr("href")){
+    if($(e).attr("href")&& $(e).attr("href").indexOf("http:")===-1){
       $(e).attr("href",root+$(e).attr("href"))
     }
   })
