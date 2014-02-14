@@ -36,31 +36,6 @@ for( var i in root_list ){
   }
   root = root_list[i]
 }
-if(root.length){
-  $("a").each(function(idx,e){
-    if($(e).attr("href")){
-      $(e).attr("href",root+$(e).attr("href"))
-    }
-  })
-
-  $("script").each(function(idx,e){
-    if($(e).attr("src")){
-      $(e).attr("src",root+$(e).attr("src"))
-    }
-  })
-
-  $("img").each(function(idx,e){
-    if($(e).attr("src")&&!$(e).attr("src").indexOf("http:")){
-      $(e).attr("src",root+$(e).attr("src"))
-    }
-  })
-
-  $("link").each(function(idx,e){
-    if($(e).attr("href")){
-      $(e).attr("href",root+$(e).attr("href"))
-    }
-  })
-}
   </script>
 </head>
 <body id="{{ page.active }}">
@@ -168,7 +143,33 @@ In addition, if I send you an email from my personal email address, leave a comm
 
   });
   </script>
-  
+  <script>
+if(root.length){
+  $("a").each(function(idx,e){
+    if($(e).attr("href")){
+      $(e).attr("href",root+$(e).attr("href"))
+    }
+  })
+
+  $("script").each(function(idx,e){
+    if($(e).attr("src")){
+      $(e).attr("src",root+$(e).attr("src"))
+    }
+  })
+
+  $("img").each(function(idx,e){
+    if($(e).attr("src")&&!$(e).attr("src").indexOf("http:")){
+      $(e).attr("src",root+$(e).attr("src"))
+    }
+  })
+
+  $("link").each(function(idx,e){
+    if($(e).attr("href")){
+      $(e).attr("href",root+$(e).attr("href"))
+    }
+  })
+}
+  </script>
   {% if page.inject %}
   <script type="text/javascript" src="/js/{{ page.inject }}"></script>
   {% endif %}
