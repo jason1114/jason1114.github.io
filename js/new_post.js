@@ -1,8 +1,18 @@
-blogListURL = 
+editor_list = {
+  'localhost': 'http://localhost/blog-editor/',
+  'bolgeditor.sturgeon.mopaas.com': 'http://bolgeditor.sturgeon.mopaas.com/'
+}
+blogListURL = ""
+for( var i in editor_list ){
+  if(window.location.host.indexOf(i) === -1){
+    continue
+  }
+  blogListURL = editor_list[i]
+}
 //"http://localhost/blog-editor/"
-"http://bolgeditor.sturgeon.mopaas.com/"
-$windowClass = $("<link/>").attr("rel","stylesheet").attr("href","/css/themes/umbra/style.css")
-$windowScript = $("<script/>").attr("type","text/javascript").attr("src","/js/jWindow.js")
+//"http://bolgeditor.sturgeon.mopaas.com/"
+$windowClass = $("<link/>").attr("rel","stylesheet").attr("href",root+"/css/themes/umbra/style.css")
+$windowScript = $("<script/>").attr("type","text/javascript").attr("src",root+"/js/jWindow.js")
 $("head").append($windowClass).append($windowScript)
 
 $(function(){
