@@ -20,6 +20,48 @@
   <link rel="stylesheet" href="/css/style.css">
   <style type="text/css">
   </style>
+  
+  <script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+root_list = {
+  'localhost': '',
+  'clever-lin.tk':'',
+  'jason1114.github.io': '/my-awesome-site'
+}
+
+root = ""
+for( var i in root_list ){
+  if(window.location.host.indexOf(i) === -1){
+    continue
+  }
+  root = root_list[i]
+}
+if(root.length){
+  $("a").each(function(idx,e){
+    if($(e).attr("href")){
+      $(e).attr("href",root+$(e).attr("href"))
+    }
+  })
+
+  $("script").each(function(idx,e){
+    if($(e).attr("src")){
+      $(e).attr("src",root+$(e).attr("src"))
+    }
+  })
+
+  $("img").each(function(idx,e){
+    if($(e).attr("src")&&!$(e).attr("src").indexOf("http:")){
+      $(e).attr("src",root+$(e).attr("src"))
+    }
+  })
+
+  $("link").each(function(idx,e){
+    if($(e).attr("href")){
+      $(e).attr("href",root+$(e).attr("href"))
+    }
+  })
+}
+  </script>
 </head>
 <body id="{{ page.active }}">
   <header class="header">
@@ -75,7 +117,6 @@ In addition, if I send you an email from my personal email address, leave a comm
       <a><span></span>Back to Top</a>    
     </p>
   </div>
-  <script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
   <!--[if lt IE 9]>
   <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
   <![endif]-->
@@ -127,46 +168,7 @@ In addition, if I send you an email from my personal email address, leave a comm
 
   });
   </script>
-  <script type="text/javascript">
-root_list = {
-  'localhost': '',
-  'clever-lin.tk':'',
-  'jason1114.github.io': '/my-awesome-site'
-}
-
-root = ""
-for( var i in root_list ){
-  if(window.location.host.indexOf(i) === -1){
-    continue
-  }
-  root = root_list[i]
-}
-if(root.length){
-  $("a").each(function(idx,e){
-    if($(e).attr("href")){
-      $(e).attr("href",root+$(e).attr("href"))
-    }
-  })
-
-  $("script").each(function(idx,e){
-    if($(e).attr("src")){
-      $(e).attr("src",root+$(e).attr("src"))
-    }
-  })
-
-  $("img").each(function(idx,e){
-    if($(e).attr("src")){
-      $(e).attr("src",root+$(e).attr("src"))
-    }
-  })
-
-  $("link").each(function(idx,e){
-    if($(e).attr("href")){
-      $(e).attr("href",root+$(e).attr("href"))
-    }
-  })
-}
-  </script>
+  
   {% if page.inject %}
   <script type="text/javascript" src="/js/{{ page.inject }}"></script>
   {% endif %}
