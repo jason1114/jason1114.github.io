@@ -1,6 +1,6 @@
 editor_list = {
   'localhost': 'http://localhost/blog-editor/',
-  'bolgeditor.sturgeon.mopaas.com': 'http://bolgeditor.sturgeon.mopaas.com/'
+  'clever-lin.tk': 'http://bolgeditor.sturgeon.mopaas.com/'
 }
 blogListURL = ""
 for( var i in editor_list ){
