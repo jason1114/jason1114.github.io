@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "OpenStack 实战 - 多节点部署案例（二）：控制节点（下）"
+title:  "OpenStack 实战 - 多节点部署案例（三）：控制节点（下）"
 date:   2014-02-13 15:38:43
 categories: ubuntu openstack
 lan: cn
