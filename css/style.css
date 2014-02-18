@@ -81,6 +81,7 @@ body{
  padding-bottom: 1px;
  color: #000;
  border: 10px solid #CECECE;
+ margin-bottom: 1em;
 }
 .highlight:before{
 }
