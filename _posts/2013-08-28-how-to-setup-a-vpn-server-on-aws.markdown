@@ -2,7 +2,7 @@
 layout: post
 title:  "如何在亚马逊云（Amazon EC2）上建立一个VPN服务器"
 date:   2013-08-28 17:20:10
-categories: vpn aws
+categories: vpn aws ubuntu
 lan: cn
 abstract: |
  搭建一个VPN服务器也是个很棒的选择，至于为什么要这么做，大家都懂吧，国内互联网的现状让我们上个Facebook什么的都很麻烦，有VPN就不一样了，AWS的服务器在北美，在VPN网关开启ipv4数据包转发后，那么我们可以想象自己就位于北美的某个局域网内，自然所有的国外网站都能访问了^_^。
