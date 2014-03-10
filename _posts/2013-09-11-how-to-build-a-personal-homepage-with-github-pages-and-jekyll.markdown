@@ -38,8 +38,11 @@ $ curl -L https://get.rvm.io | bash -s stable
 打开一个新的命令行终端,把 RVM 默认安装源从官方源替换成国内的淘宝源，国外源国内访问不稳定，至于原因，你懂的。
 {% highlight bash %}
 $ source ~/.rvm/scripts/rvm  #load variables about rvm
-$ sed -i 's!ftp.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
+$ sed -i 's!cache.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
 {% endhighlight %}
+
+> 关注淘宝镜像源的最新情况，请[点击这里][taobao ruby source]
+
 开始安装 Ruby 吧(执行下面的命令会要求输入 Root 密码)！^_^
 {% highlight bash %}
 $ rvm install ruby
@@ -181,6 +184,7 @@ Github Pages 目前支持绑定自定义域名，你可以购买收费域名，�
 7. Github Help,[Setting up a custom domain with pages][github pages domain]
 
 [rvm]: http://rvm.io "rvm homepage"
+[taobao ruby source]: http://ruby.taobao.org/ "taobao ruby source"
 [jekyll home]: http://jekyllrb.com/ "jekyll homepage"
 [github]: http://github.com "github"
 [ssh key setting]: https://github.com/settings/ssh "ssh key setting"
