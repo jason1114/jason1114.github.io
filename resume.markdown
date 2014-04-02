@@ -45,7 +45,7 @@ active: about
 
 
 
-<style>
+<style type="text/css">
 h2{
 margin-left:1.5em;
 }
