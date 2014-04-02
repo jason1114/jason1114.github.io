@@ -1,7 +1,7 @@
 ---
 layout: base
 title: 个人简历
-active: about
+active: resume
 ---
 
 ##基本信息
@@ -43,19 +43,3 @@ active: about
 
 我的不足：前端功力尚不扎实，在从事JS工作之前，我还需要学习前端方方面面，尤其是看了github上的项目fks，深知还有很长的一段路要走。还有一点学生阶段编码习惯不好，注释不常写，单元测试也不常写，有待改正。
 
-
-
-<style type="text/css">
-h2{
-margin-left:1.5em;
-}
-h3{
-margin-left:2em;
-}
-p{
-margin-left:2.5em;
-}
-footer p{
-margin-left:0
-}
-</style>

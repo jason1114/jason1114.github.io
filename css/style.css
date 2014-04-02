@@ -890,3 +890,18 @@ scroll to top button
 #back-top a:hover span {
   background-color: #777;
 }
+/*
+  only for page resume
+*/
+#resume h2{
+margin-left:1.5em;
+}
+#resume h3{
+margin-left:2em;
+}
+#resume p{
+margin-left:2.5em;
+}
+#resume footer p{
+margin-left:0
+}
