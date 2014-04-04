@@ -5,7 +5,7 @@ date:   2014-04-03 21:34:01
 categories: javascript translation
 lan: cn
 abstract: |
- 
+ 在 JavaScript 中，对象就是由许多键值对组成的东西（在 Ruby 中，这个结构被称为 Hash ；在 Python 中，被成为 dictionary）。举个例子，如果我希望描述我的名字，我可以使用一个拥有两个键值对的对象，它们分别是“firstname”对应“Yehuda”，“lastname”对应“Katz”。键在 JavaScript 对象中是字符串类型。
 ---
 > * 原文作者： Yehuda Katz
 > * 原文地址： [Understanding Prototypes in JavaScript][original]
