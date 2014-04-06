@@ -1,6 +1,6 @@
 ---
 layout: base
-title: 个人简历
+title: 前端/Node 个人简历
 active: resume
 ---
 
@@ -8,8 +8,12 @@ active: resume
 * 姓名：周涅林
 * 本科：山东大学
 * 研究生：山东大学（研一在读）
+* 籍贯：浙江宁波
 * 联系方式：15153123308
 * 个人博客：[http://clever-lin.tk/articles](http://clever-lin.tk/articles)
+
+##专业技能
+熟悉JavaScript, CoffeeScript。能够使用 HTML，CSS 实现指定的页面效果。后端领域熟悉Java/Groovy/Grails，PHP，Erlang。理解面向对象编程/函数式编程/面向并发编程。熟悉 Linux 下开发环境及常用工具。理解网络协议，对Web安全有认识。
 
 ##项目经验
 
@@ -28,18 +32,16 @@ active: resume
 我负责的部分，后台管理前后端部分功能实现：点菜终端管理、服务人员管理、菜单管理、预约管理、餐桌管理、订单管理。涉及到的技术：数据库 DB2，页面PHP，采用框架 ThinkPHP，前端 BootStrap，RequireJS，Jquery。
 
 ###JudgeAgent在线测评系统
-我的本科毕设，自己完成。类似于POJ的ACM判题训练系统。使用到的技术，后端 Groovy/Grails ，前端 RequireJS，CoffeeScript, Jquery及各种插件。判题部分使用了一个开源沙箱项目libsanbox，不过由于对操作系统底层知识并没有把握很好，沙箱工作的时候不是很稳定。
+我的本科毕设，自己完成。类似于POJ的ACM判题训练系统。使用到的技术，后端 Groovy/Grails ，前端 RequireJS，CoffeeScript, Jquery及各种插件。判题部分使用了一个开源沙箱项目libsanbox。
 
 ###个人博客
-自己完成，受Github Pages上建博客的风气影响做的，Jekyll完成。图片使用了七牛CDN，评论留言使用了第三方，自己相对来说写的少，主要写前端了，第一次尝试用响应式风格做了一下。由于每次写博客需要用Git，为了方便在其它没有安装Git的电脑上写博客，我又在Mopaas上写了一个在线Editor，可以在网页上写博客实时预览，写完登录Github提交就好了,这个Editor用的PHP，然后EasyUI,CodeMirror。
+自己完成，受Github Pages上建博客的风气影响做的，Jekyll完成。图片使用了七牛CDN，评论留言使用了第三方，自己相对来说写的少，主要写前端了，第一次尝试用响应式风格做了一下。由于每次写博客需要用Git，为了方便在其它没有安装Git的电脑上写博客，在Mopaas上写了一个在线Editor，可以在网页上写博客实时预览，用的PHP实现，然后EasyUI,CodeMirror。
 ###实验室私有云平台架设
-自己完成，实验室项目较多，通常在服务器上创建多个虚拟机跑，为了管理这些虚拟机，领导考虑做一个私有云平台。使用OpenStack搭建，环境有Ubuntu，Redhat。最终搭起来一个三节点的跑起来小范围用了用。虚拟环境里有Ubuntu Server, Windows Server 2012, Cent OS。
+自己完成，实验室项目较多，通常在服务器上创建多个虚拟机跑，为了管理这些虚拟机，老师考虑做一个私有云平台。使用OpenStack搭建，宿主环境为Ubuntu，Redhat。最终搭起来一个三节点的小集群。使用VPN从外部管理。
 
 
 ##自我评价
-我曾经做的项目可能主要以Java为主，不过接触前端时间久了，对JS感觉更有兴趣,最近在看NodeJS方面的书，如果有机会做一些Node方面的工作，我是很高兴的。
+个人主要兴趣点在前端的 JavaScript 以及后端的 Node。
 
 我个人性格比较喜欢接触新技术，研究，总结，然后运用到我学习中，有好奇心和钻研的动力。
-
-我的不足：前端功力尚不扎实，在从事JS工作之前，我还需要学习前端方方面面，尤其是看了github上的项目fks，深知还有很长的一段路要走。还有一点学生阶段编码习惯不好，注释不常写，单元测试也不常写，有待改正。
 
