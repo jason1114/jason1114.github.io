@@ -5,6 +5,8 @@ permalink: /articles/:year/:month/:day/:title.html
 paginate: 5
 paginate_path: /articles/page-:num
 
+markdown: kramdown
+
 timezone: Asia/Beijing
 navigation:
 - text: ABOUT ME
