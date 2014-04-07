@@ -904,7 +904,9 @@ margin-left:2em;
 }
 #resume p{
 margin-left:2.5em;
+margin-right: 3em;
 }
 #resume footer p{
-margin-left:0
+margin-left:0;
+margin-right:0;
 }
