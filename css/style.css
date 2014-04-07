@@ -893,6 +893,9 @@ scroll to top button
 /*
   only for page resume
 */
+#resume{
+margin-right:3em;
+}
 #resume h2{
 margin-left:1.5em;
 }
