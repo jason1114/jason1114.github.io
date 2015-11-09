@@ -72,7 +72,7 @@ $(function(){
        $("title").text(data['title'])
        $("#post_date").text(data['date'])
        $("#tags").html('')
-       for(var i=0;i<data['tags'].length;i++){
+       for(var i=0;data['tags'] && i<data['tags'].length;i++){
        		$span = $("<span/>")
        		$a = $("<a/>").attr("href","/articles/"+data['tags'][i]).text(data['tags'][i])
        		$span.append($a)
