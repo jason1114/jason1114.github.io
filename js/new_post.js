@@ -2,12 +2,15 @@ editor_list = {
   'localhost': 'http://localhost/blog-editor/',
   'clever-lin.tk': 'http://bolgeditor.sturgeon.mopaas.com/'
 }
-blogListURL = ""
+var blogListURL = ""
 for( var i in editor_list ){
   if(window.location.host.indexOf(i) === -1){
     continue
   }
   blogListURL = editor_list[i]
+}
+if (!blogListURL) {
+    blogListURL = editor_list['clever-lin.tk']
 }
 //"http://localhost/blog-editor/"
 //"http://bolgeditor.sturgeon.mopaas.com/"
